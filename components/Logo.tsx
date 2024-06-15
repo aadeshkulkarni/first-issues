@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <div>
       <Link href="/">
-        <p className="text-2xl font-bold italic hover:cursor-pointer">
+        <p className="text-2xl font-bold italic hover:cursor-pointer tracking-wide">
           GoodFirstIssues.
         </p>
       </Link>
