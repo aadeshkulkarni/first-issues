@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Good first issues!",
   description:
     "Helping developers discover and contribute to outstanding open-source repositories.",
+  // [TODO]: Add icon here
 };
 
 export default function RootLayout({
