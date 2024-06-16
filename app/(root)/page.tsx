@@ -41,12 +41,12 @@ const Home = () => {
           <Accordion key={repo.name} type="single" collapsible>
             <AccordionItem
               value="item-1"
-              className="border p-4 rounded-lg shadow-md"
+              className="border px-4 rounded-lg shadow-md"
             >
               <AccordionTrigger>
                 <div className="text-left relative w-full">
                   <Link target="_blank" href={repo.url}>
-                    <h1 className="text-lg font-semibold hover:underline">
+                    <h1 className="inline text-lg font-semibold hover:underline">
                       {repo.owner} / {repo.name}
                     </h1>
                   </Link>
@@ -58,7 +58,7 @@ const Home = () => {
                       Last active: {dayjs(repo.last_modified).from(dayjs())}
                     </div>
                   </div>
-                  <div className="absolute top-4 right-8 rounded-full border px-4 p-2 text-xs">
+                  <div className="absolute top-2 right-8 rounded-full border px-4 p-2 text-xs">
                     {repo.issues.length} issues
                   </div>
                 </div>
