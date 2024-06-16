@@ -2,7 +2,7 @@ import { Repo } from "@/schema/repo";
 
 const populateRepoDetails = async (owner: string, repo_name: string) => {
   try {
-    console.group(`Getting info for ${owner}/${repo_name}`);
+    console.log(`[${owner}/${repo_name}]: Getting info...`);
 
     const metadataPromise = fetch(
       `https://api.github.com/repos/${owner}/${repo_name}`
@@ -38,13 +38,14 @@ const populateRepoDetails = async (owner: string, repo_name: string) => {
 
     // Filters
     if (metadata.archived) {
-      console.log("Repository has been archived.");
+      console.log(`[${owner}/${repo_name}]: Repository is archived.`);
       return null;
     }
 
-    console.log(`Got ${issues.length} good first issues`);
     if (issues.length < 3) {
-      console.log("Does not have enough good first issues.");
+      console.log(
+        `[${owner}/${repo_name}]: Does not have enough good first issues.`
+      );
       return null;
     }
 
@@ -68,10 +69,9 @@ const populateRepoDetails = async (owner: string, repo_name: string) => {
         })) ?? [],
     };
 
-    console.groupEnd();
     return payload;
   } catch (e) {
-    console.error(e);
+    console.error(`[${owner}/${repo_name}]: Failed to fetch`, e);
     return null;
   }
 };

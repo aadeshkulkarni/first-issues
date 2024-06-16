@@ -16,7 +16,6 @@ import {
 import Link from "next/link";
 import { MessagesSquare } from "lucide-react";
 import ListLoader from "@/components/ListLoader";
-import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 
 const Home = () => {
