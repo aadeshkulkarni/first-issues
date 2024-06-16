@@ -16,6 +16,8 @@ import {
 import Link from "next/link";
 import { MessagesSquare } from "lucide-react";
 import ListLoader from "@/components/ListLoader";
+import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
 
 const Home = () => {
   const { isLoading, data: repos } = useFetch<Repo[]>({ url: "/api/repos" });
@@ -23,6 +25,17 @@ const Home = () => {
   return (
     <main className="flex min-h-screen flex-col justify-between">
       <div className="flex flex-col gap-4">
+        <div className="flex justify-end">
+          <Link
+            target="_blank"
+            href="https://github.com/aadeshkulkarni/good-first-issues#adding-a-new-project"
+          >
+            <div className="inline-flex gap-2 items-center justify-center rounded-md text-sm font-medium transition-colors h-10 px-4 py-2 border  bg-background hover:bg-accent hover:text-accent-foreground">
+              <Plus size="16px" />
+              Add your project
+            </div>
+          </Link>
+        </div>
         <ListLoader isLoading={isLoading} />
         {repos?.map((repo) => (
           <Accordion key={repo.name} type="single" collapsible>
