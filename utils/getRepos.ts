@@ -5,7 +5,7 @@ export const getRepos = async (): Promise<string[]> => {
     const file = await fs.readFile(process.cwd() + "/data/repos.json", "utf8");
     const data = JSON.parse(file);
 
-    return data.repos;
+    return data;
   } catch (error) {
     throw new Error("Failed to read repos.json");
   }

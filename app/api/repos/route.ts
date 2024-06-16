@@ -1,19 +1,13 @@
 import { getRepos } from "@/utils/getRepos";
+import { populate } from "@/app/api/_scripts/populate";
 
 const getRepoMetadata = async (repos: string[]) => {
-  // fetch details for each repo
-  const repoDetailPromises = repos.map((repo) =>
-    fetch(`https://api.github.com/repos${repo}`).then((res) => res.json())
-  );
-
-  const repoMetadata = await Promise.allSettled(repoDetailPromises);
-
-  return (
-    repoMetadata
-      .filter((item) => item.status === "fulfilled")
-      // TODO: fix up the error here
-      .map((item) => item.value)
-  );
+  try {
+    const response = await populate(repos);
+    return response;
+  } catch (e) {
+    console.error(e);
+  }
 };
 
 export const GET = async () => {
