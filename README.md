@@ -7,7 +7,7 @@
 
 Welcome! 👋🏼
 
-**Good First Issue** is an initiative to curate easy pickings from popular projects, so developers who've never contributed to open-source can get started quickly.
+**First Issues** is an initiative to curate easy pickings from open-source projects, so developers who've never contributed to open-source can get started quickly.
 
 Open-source maintainers are always looking to get more people involved, but new developers generally think it's challenging to become a contributor. We believe getting developers to fix super-easy issues removes the barrier for future contributions. This is why Good First Issue exists.
 
@@ -27,9 +27,9 @@ Follow these simple steps:
 
   - It is actively maintained.
 
-- Add your repository's path (in lexicographic order) in [data/repositories.toml](data/repositories.json).
+- Add your repository's path (in lexicographic order) in [data/repos.json](data/repos.json).
 
-- Create a new pull-request. Please add the link to the issues page of the repository in the PR description. Once the pull request is merged, the changes will be live on [goodfirstissue.dev]().
+- Create a new pull-request. Please add the link to the issues page of the repository in the PR description. Once the pull request is merged, the changes will be live on [firstissues.dev](https://firstissues.dev).
 
 ## Setting up the project locally
 
@@ -37,13 +37,15 @@ Good First Issue has two components — the front-end app built with Nuxt.js and
 
 To contribute new features and changes to the website, you would want to run the app locally. Please follow these steps:
 
-1. Clone the project locally. Make sure you have Python 3 and a recent version of Node.js installed on your computer.
+1. Clone the project locally. Make sure you have Python 3 and a recent version of Node.js installed on your computer. 
 
-2. Build the front-end app and start the development server.
+2. Add GITHUB_TOKEN in .env file
+
+3. Build the front-end app and start the development server.
 
 ```bash
 $ npm install # install the dependencies
 $ npm run dev # start the development server
 ```
 
-The app should open in your browser.
+The app should spin up on your browser.
