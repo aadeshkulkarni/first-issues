@@ -1,22 +1,19 @@
 import React from "react";
-import Logo from "./Logo";
 import Link from "next/link";
+import ModeToggle from "./ModeToggle";
+import { Bad_Script } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const badScript = Bad_Script({ weight: "400", subsets: ["latin"] });
 
 const Header = () => {
   return (
-    <header className="bg-gray-800 text-white">
-      <div className="py-6 max-w-4xl px-4 lg:px-0 mx-auto flex flex-col md:flex-row items-center justify-between">
-        <Logo />
-        <nav className="mt-4 md:mt-0">
-          <ul className="flex flex-col md:flex-row gap-4 md:gap-8 text-center">
-            <li>
-              <LinkButton label="About" url="/about" />
-            </li>
-            <li>
-              <LinkButton label="Contributors" url="/contributors" />
-            </li>
-          </ul>
-        </nav>
+    <header className="shadow-sm">
+      <div className="py-6 max-w-5xl px-4 lg:px-0 mx-auto flex flex-row items-center justify-between">
+        <h1 className={cn("text-2xl font-bold tracking-wide", badScript.className)}>
+          FirstIssues.dev
+        </h1>
+        <ModeToggle />
       </div>
     </header>
   );
