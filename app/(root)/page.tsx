@@ -6,18 +6,19 @@ import Info from "@/components/Info";
 import Filter from "@/components/Filter";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
-import { useRouter } from "next/navigation";
+
 const New_PROJECT =
   "https://github.com/aadeshkulkarni/first-issues?tab=readme-ov-file#adding-a-new-project";
 
-  const Home = () => {
-  const router = useRouter();
+const Home = () => {
+  const [langFilter, setLangFilter] = React.useState<string>("");
+
   return (
     <main className="flex min-h-screen flex-col justify-between overflow-hidden">
       <div className="grid grid-cols-12">
         <div className="col-span-12 md:col-span-4 px-4 sticky overflow-hidden">
           <Info />
-          <Filter />
+          <Filter langFilter={langFilter} setLangFilter={setLangFilter} />
           <Button
             variant="default"
             className="w-full uppercase text-sm"
@@ -27,7 +28,7 @@ const New_PROJECT =
           </Button>
         </div>
         <div className="col-span-12 md:col-span-8 h-[90vh] overflow-y-auto">
-          <List />
+          <List langFilter={langFilter} />
         </div>
       </div>
     </main>

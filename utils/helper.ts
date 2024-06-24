@@ -32,3 +32,10 @@ export const writeToRepoDetails = (content: RepoDetails) => {
     JSON.stringify(content, null, 2)
   );
 };
+
+export const groupBy = (data: any[], key: string) => {
+  return data.reduce((acc, y) => {
+    (acc[y[key]] = acc[y[key]] || []).push(y);
+    return acc;
+  }, {});
+};

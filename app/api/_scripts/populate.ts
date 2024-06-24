@@ -1,7 +1,5 @@
 import { Repo } from "@/schema/repo";
-import { readRepoDetails, writeToRepoDetails } from "@/utils/helper";
-import dayjs from "dayjs";
-import { promises as fs } from "fs";
+import { groupBy, readRepoDetails, writeToRepoDetails } from "@/utils/helper";
 
 const populateRepoDetails = async (owner: string, repo_name: string) => {
   try {
@@ -74,20 +72,12 @@ const populateRepoDetails = async (owner: string, repo_name: string) => {
 
     return payload;
   } catch (e: any) {
-    console.log(`[${owner}/${repo_name}]: ${e.message}`)
+    console.log(`[${owner}/${repo_name}]: ${e.message}`);
     return null;
   }
 };
 
-export const populate = async (repos: string[]) => {
-  const repoDetailsFile = await readRepoDetails();
-
-  // Read from file if cache exists
-  if (dayjs().diff(dayjs(repoDetailsFile.last_modified), "hours") < 8) {
-    console.log("Returning from cache...");
-    return repoDetailsFile.details;
-  }
-
+export const populate = async (repos: string[]): Promise<Repo[]> => {
   const promises = repos.map((repo) => {
     const [owner, repo_name] = repo.split("/");
     return populateRepoDetails(owner, repo_name);
@@ -98,9 +88,13 @@ export const populate = async (repos: string[]) => {
     .filter(
       (res): res is PromiseFulfilledResult<Repo> => res.status === "fulfilled"
     )
-    .map((res) => res.value).filter(Boolean);
+    .map((res) => res.value)
+    .filter(Boolean);
 
-  writeToRepoDetails({last_modified: new Date().toISOString(), details: responses})
+  writeToRepoDetails({
+    last_modified: new Date().toISOString(),
+    details: groupBy(responses, "language"),
+  });
 
   return responses;
 };

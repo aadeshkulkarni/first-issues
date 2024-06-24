@@ -15,8 +15,15 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import { Badge } from "./ui/badge";
 dayjs.extend(relativeTime);
 
-const List = () => {
-  const { isLoading, data: repos } = useFetch<Repo[]>({ url: "/api/repos" });
+interface Props {
+  langFilter: string;
+}
+
+const List = ({ langFilter }: Props) => {
+  const { isLoading, data: repos } = useFetch<Repo[]>({
+    url: `/api/repos?lang=${langFilter}`,
+  });
+
   return (
     <>
       <ListLoader isLoading={isLoading} />
@@ -37,11 +44,15 @@ const List = () => {
                   </Link>
                   <Badge variant="outline">{repo.issues.length} issues</Badge>
                 </div>
-                <h6 className="text-md text-slate-800 dark:text-slate-400">{repo.description}</h6>
+                <h6 className="text-md text-slate-800 dark:text-slate-400">
+                  {repo.description}
+                </h6>
                 <div className="flex gap-x-4 py-2 font-light text-slate-800 dark:text-slate-400">
                   <div>Stars: {repo.stars}</div>
                   <div>Lang: {repo.language}</div>
-                  <div>Last active: {dayjs(repo.last_modified)?.from(dayjs())}</div>
+                  <div>
+                    Last active: {dayjs(repo.last_modified)?.from(dayjs())}
+                  </div>
                 </div>
               </div>
             </AccordionTrigger>
