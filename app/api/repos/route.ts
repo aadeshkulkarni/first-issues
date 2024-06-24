@@ -1,4 +1,4 @@
-import { getRepos } from "@/utils/getRepos";
+import { readRepos } from "@/utils/helper";
 import { populate } from "@/app/api/_scripts/populate";
 
 const getRepoMetadata = async (repos: string[]) => {
@@ -12,7 +12,7 @@ const getRepoMetadata = async (repos: string[]) => {
 
 export const GET = async () => {
   try {
-    const repos = await getRepos();
+    const repos = await readRepos();
     const repoMetadata = await getRepoMetadata(repos);
 
     return new Response(JSON.stringify(repoMetadata), { status: 200 });
