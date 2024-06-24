@@ -10,9 +10,16 @@ const Header = () => {
   return (
     <header className="shadow-sm">
       <div className="py-6 max-w-5xl px-4 lg:px-0 mx-auto flex flex-row items-center justify-between">
-        <h1 className={cn("text-2xl font-bold tracking-wide", badScript.className)}>
-          FirstIssues.dev
-        </h1>
+        <Link href="/">
+          <h1
+            className={cn(
+              "text-2xl font-bold tracking-wide hover:cursor-pointer",
+              badScript.className
+            )}
+          >
+            FirstIssues.dev
+          </h1>
+        </Link>
         <ModeToggle />
       </div>
     </header>
