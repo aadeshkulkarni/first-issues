@@ -1,12 +1,18 @@
 import { Repo } from "@/schema/repo";
-import { groupBy, readRepoDetails, writeToRepoDetails } from "@/utils/helper";
+import { groupBy, writeToRepoDetails } from "@/utils/helper";
 
 const populateRepoDetails = async (owner: string, repo_name: string) => {
   try {
     console.log(`[${owner}/${repo_name}]: Getting info...`);
 
     const metadataPromise = fetch(
-      `https://api.github.com/repos/${owner}/${repo_name}`
+      `https://api.github.com/repos/${owner}/${repo_name}`,
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+          "User-Agent": "request",
+        },
+      }
     );
     const issuesPromise = fetch(
       `https://api.github.com/repos/${owner}/${repo_name}/issues?labels=${encodeURIComponent(
@@ -38,12 +44,12 @@ const populateRepoDetails = async (owner: string, repo_name: string) => {
     );
 
     // Filters
-    if (metadata.archived) {
+    if (metadata?.archived) {
       console.log(`[${owner}/${repo_name}]: Repository is archived.`);
       return null;
     }
 
-    if (issues.length < 3) {
+    if (issues?.length < 3) {
       console.log(
         `[${owner}/${repo_name}]: Does not have enough good first issues.`
       );
