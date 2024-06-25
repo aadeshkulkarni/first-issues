@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -23,11 +23,18 @@ const List = ({ langFilter }: Props) => {
   const { isLoading, data: repos } = useFetch<Repo[]>({
     url: `/api/repos?lang=${langFilter}`,
   });
+  const [sortedRepos, setSortedRepos] = useState<Repo[]>([]);
 
+  useEffect(() => {
+    if (repos) {
+      const sorted = [...repos].sort((a, b) => a.owner.localeCompare(b.owner));
+      setSortedRepos(sorted);
+    }
+  }, [repos]);
   return (
     <>
       <ListLoader isLoading={isLoading} />
-      {repos?.map((repo) => (
+      {sortedRepos?.map((repo) => (
         <Accordion key={repo.name} type="single" collapsible className="my-2">
           <AccordionItem
             value="item-1"
