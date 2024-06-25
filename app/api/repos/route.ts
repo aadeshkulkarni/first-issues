@@ -1,7 +1,6 @@
 import { readRepoDetails, readRepos } from "@/utils/helper";
 import { populate } from "@/app/api/_scripts/populate";
 import dayjs from "dayjs";
-import { NextApiRequest } from "next";
 
 const getRepoMetadata = async (repos: string[]) => {
   try {
@@ -22,7 +21,7 @@ const getRepoMetadata = async (repos: string[]) => {
   }
 };
 
-export const GET = async (req: NextApiRequest) => {
+export const GET = async (req: Request) => {
   try {
     const url = new URL(req.url || "");
     const lang = url.searchParams.get("lang")?.toLowerCase() || "";
