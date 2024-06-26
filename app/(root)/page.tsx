@@ -14,8 +14,8 @@ const Home = () => {
   const [langFilter, setLangFilter] = React.useState<string>("");
 
   return (
-    <main className="flex min-h-screen flex-col justify-between overflow-hidden">
-      <div className="grid grid-cols-12">
+    <main className="flex min-h-screen flex-col justify-between md:overflow-hidden">
+      <div className="grid grid-cols-12 gap-4">
         <div className="col-span-12 md:col-span-4 px-4 sticky overflow-hidden">
           <Info />
           <Filter langFilter={langFilter} setLangFilter={setLangFilter} />

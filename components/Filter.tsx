@@ -16,7 +16,7 @@ const Filter = ({ langFilter, setLangFilter }: Props) => {
   });
 
   return (
-    <div className="py-4">
+    <div className="py-2 md:py-4">
       <h2 className="uppercase font-semibold text-md py-4 text-slate-700 dark:text-slate-300">
         BROWSE BY LANGUAGE
       </h2>
