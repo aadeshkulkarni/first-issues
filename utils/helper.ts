@@ -3,7 +3,7 @@ import { promises as fs } from "fs";
 
 export const readRepos = async (): Promise<string[]> => {
   try {
-    const file = await fs.readFile("/tmp/repos.json", "utf8");
+    const file = await fs.readFile(process.cwd() + "/data/repos.json", "utf8");
     const data = JSON.parse(file);
 
     return data;
@@ -15,7 +15,7 @@ export const readRepos = async (): Promise<string[]> => {
 export const readRepoDetails = async (): Promise<RepoDetails> => {
   try {
     const file = await fs.readFile(
-      "/tmp/repo_details.json",
+      process.cwd() + "/data/repo_details.json",
       "utf8"
     );
     const data = JSON.parse(file);
@@ -28,7 +28,7 @@ export const readRepoDetails = async (): Promise<RepoDetails> => {
 
 export const writeToRepoDetails = (content: RepoDetails) => {
   fs.writeFile(
-    "/tmp/repo_details.json",
+    process.cwd() + "/data/repo_details.json",
     JSON.stringify(content, null, 2)
   );
 };

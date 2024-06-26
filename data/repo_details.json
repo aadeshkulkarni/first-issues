@@ -1,0 +1,3110 @@
+{
+  "last_modified": "2024-06-24T18:14:04.634Z",
+  "details": {
+    "Rust": [
+      {
+        "name": "nannou",
+        "owner": "nannou-org",
+        "description": "A Creative Coding Framework for Rust.",
+        "language": "Rust",
+        "url": "https://github.com/nannou-org/nannou",
+        "stars": 5880,
+        "last_modified": "2024-06-17T07:42:41.000Z",
+        "id": "102113773",
+        "issues": [
+          {
+            "title": "Handle unhandled events introduced in winit 0.27+ (TouchMagnify, IME, etc) in event.rs",
+            "url": "https://github.com/nannou-org/nannou/issues/903",
+            "number": 903,
+            "comments_count": 1,
+            "created_at": "2023-01-20T03:18:45.000Z"
+          },
+          {
+            "title": "Fix orientation of teapot in `wgpu_instancing.rs` after update to 0.5",
+            "url": "https://github.com/nannou-org/nannou/issues/596",
+            "number": 596,
+            "comments_count": 1,
+            "created_at": "2020-05-10T14:19:00.000Z"
+          },
+          {
+            "title": "Expose `nannou::wgpu::texture::image::Pixel` from `wgpu` module",
+            "url": "https://github.com/nannou-org/nannou/issues/595",
+            "number": 595,
+            "comments_count": 0,
+            "created_at": "2020-05-09T23:43:46.000Z"
+          },
+          {
+            "title": "Provide an easy way of generating universal binaries for each platform",
+            "url": "https://github.com/nannou-org/nannou/issues/450",
+            "number": 450,
+            "comments_count": 1,
+            "created_at": "2020-02-15T11:09:10.000Z"
+          },
+          {
+            "title": "Update `nannou-new` to work with cargo workspaces",
+            "url": "https://github.com/nannou-org/nannou/issues/448",
+            "number": 448,
+            "comments_count": 5,
+            "created_at": "2020-02-15T10:40:30.000Z"
+          },
+          {
+            "title": "Add audio input stream examples",
+            "url": "https://github.com/nannou-org/nannou/issues/435",
+            "number": 435,
+            "comments_count": 1,
+            "created_at": "2019-12-11T16:29:52.000Z"
+          },
+          {
+            "title": "Improving iterative compile times for projects depending on nannou",
+            "url": "https://github.com/nannou-org/nannou/issues/387",
+            "number": 387,
+            "comments_count": 4,
+            "created_at": "2019-08-18T17:33:55.000Z"
+          },
+          {
+            "title": "image example",
+            "url": "https://github.com/nannou-org/nannou/issues/316",
+            "number": 316,
+            "comments_count": 0,
+            "created_at": "2019-05-24T11:30:39.000Z"
+          },
+          {
+            "title": "Doc links broken",
+            "url": "https://github.com/nannou-org/nannou/issues/203",
+            "number": 203,
+            "comments_count": 3,
+            "created_at": "2018-10-28T13:08:04.000Z"
+          }
+        ]
+      },
+      {
+        "name": "isograph",
+        "owner": "isographlabs",
+        "description": "The UI framework for teams that move fast — without breaking things.",
+        "language": "Rust",
+        "url": "https://github.com/isographlabs/isograph",
+        "stars": 200,
+        "last_modified": "2024-06-24T17:51:11.000Z",
+        "id": "622052729",
+        "issues": [
+          {
+            "title": "Deduplicate entrypoints",
+            "url": "https://github.com/isographlabs/isograph/issues/86",
+            "number": 86,
+            "comments_count": 0,
+            "created_at": "2024-05-22T00:47:45.000Z"
+          },
+          {
+            "title": "Investigate re-rendering bug",
+            "url": "https://github.com/isographlabs/isograph/issues/85",
+            "number": 85,
+            "comments_count": 0,
+            "created_at": "2024-05-10T02:32:14.000Z"
+          },
+          {
+            "title": "Add more cases to NonConstantValue",
+            "url": "https://github.com/isographlabs/isograph/issues/82",
+            "number": 82,
+            "comments_count": 0,
+            "created_at": "2024-05-06T00:54:15.000Z"
+          },
+          {
+            "title": "Iso language parser should compile to wasm",
+            "url": "https://github.com/isographlabs/isograph/issues/72",
+            "number": 72,
+            "comments_count": 0,
+            "created_at": "2024-04-17T13:15:15.000Z"
+          },
+          {
+            "title": "CLI command to create a new isograph config",
+            "url": "https://github.com/isographlabs/isograph/issues/68",
+            "number": 68,
+            "comments_count": 3,
+            "created_at": "2024-04-16T12:18:22.000Z"
+          },
+          {
+            "title": "Babel transform (and SWC transform eventually) should also replace iso field literals",
+            "url": "https://github.com/isographlabs/isograph/issues/65",
+            "number": 65,
+            "comments_count": 0,
+            "created_at": "2024-04-16T07:40:38.000Z"
+          },
+          {
+            "title": "Add check to ci.yml to ensure that, when we publish, Cargo.toml versions are up-to-date",
+            "url": "https://github.com/isographlabs/isograph/issues/64",
+            "number": 64,
+            "comments_count": 0,
+            "created_at": "2024-04-16T06:21:57.000Z"
+          },
+          {
+            "title": "@component should take an optional memoize: true/false parameter",
+            "url": "https://github.com/isographlabs/isograph/issues/61",
+            "number": 61,
+            "comments_count": 0,
+            "created_at": "2024-04-14T19:27:06.000Z"
+          },
+          {
+            "title": "[bug] Commenting out an iso literal should not cause the compiler to panic",
+            "url": "https://github.com/isographlabs/isograph/issues/58",
+            "number": 58,
+            "comments_count": 0,
+            "created_at": "2024-04-14T14:53:31.000Z"
+          },
+          {
+            "title": "Figure out how to use Babel/SWC plugins with Vitest",
+            "url": "https://github.com/isographlabs/isograph/issues/56",
+            "number": 56,
+            "comments_count": 0,
+            "created_at": "2024-04-14T14:22:51.000Z"
+          }
+        ]
+      },
+      {
+        "name": "http-types",
+        "owner": "http-rs",
+        "description": " Common types for HTTP operations",
+        "language": "Rust",
+        "url": "https://github.com/http-rs/http-types",
+        "stars": 200,
+        "last_modified": "2024-02-16T10:55:26.000Z",
+        "id": "219632755",
+        "issues": [
+          {
+            "title": "Accept header sort is not stable leading to unstable negotiation result",
+            "url": "https://github.com/http-rs/http-types/issues/361",
+            "number": 361,
+            "comments_count": 1,
+            "created_at": "2021-05-04T06:00:53.000Z"
+          },
+          {
+            "title": "Splitting on comma to parse the Accept header is wrong",
+            "url": "https://github.com/http-rs/http-types/issues/349",
+            "number": 349,
+            "comments_count": 8,
+            "created_at": "2021-03-12T10:50:53.000Z"
+          },
+          {
+            "title": "Use `ascii` crate for string values inside `HeaderValue`, `HeaderName` types",
+            "url": "https://github.com/http-rs/http-types/issues/313",
+            "number": 313,
+            "comments_count": 8,
+            "created_at": "2020-12-26T16:53:22.000Z"
+          }
+        ]
+      },
+      {
+        "name": "ethui",
+        "owner": "ethui",
+        "description": "An Ethereum toolkit",
+        "language": "Rust",
+        "url": "https://github.com/ethui/ethui",
+        "stars": 200,
+        "last_modified": "2024-06-23T13:07:06.000Z",
+        "id": "600530281",
+        "issues": [
+          {
+            "title": "Adding a new network displays NaN",
+            "url": "https://github.com/ethui/ethui/issues/679",
+            "number": 679,
+            "comments_count": 0,
+            "created_at": "2024-06-21T10:47:23.000Z"
+          },
+          {
+            "title": "Contract filter should be aware of alias",
+            "url": "https://github.com/ethui/ethui/issues/678",
+            "number": 678,
+            "comments_count": 0,
+            "created_at": "2024-06-20T15:23:50.000Z"
+          },
+          {
+            "title": "Token balance should take into consideration the number of decimal places",
+            "url": "https://github.com/ethui/ethui/issues/676",
+            "number": 676,
+            "comments_count": 1,
+            "created_at": "2024-06-19T09:27:38.000Z"
+          },
+          {
+            "title": "EIP-747 - wallet_watchAsset",
+            "url": "https://github.com/ethui/ethui/issues/152",
+            "number": 152,
+            "comments_count": 0,
+            "created_at": "2023-05-16T13:30:25.000Z"
+          },
+          {
+            "title": "EIP 2015 - wallet_updateEthereumChain",
+            "url": "https://github.com/ethui/ethui/issues/151",
+            "number": 151,
+            "comments_count": 2,
+            "created_at": "2023-05-16T13:28:42.000Z"
+          }
+        ]
+      },
+      {
+        "name": "glsl",
+        "owner": "hadronized",
+        "description": "GLSL parser for Rust",
+        "language": "Rust",
+        "url": "https://github.com/hadronized/glsl",
+        "stars": 190,
+        "last_modified": "2023-12-22T23:34:49.000Z",
+        "id": "93617702",
+        "issues": [
+          {
+            "title": "Rewrite lexical parsers",
+            "url": "https://github.com/hadronized/glsl/issues/114",
+            "number": 114,
+            "comments_count": 0,
+            "created_at": "2020-02-10T22:20:36.000Z"
+          },
+          {
+            "title": "Unit test for syntax::Declaration::Global  ",
+            "url": "https://github.com/hadronized/glsl/issues/51",
+            "number": 51,
+            "comments_count": 0,
+            "created_at": "2018-11-19T23:01:36.000Z"
+          },
+          {
+            "title": "Structs should be allowed to be constructed if…",
+            "url": "https://github.com/hadronized/glsl/issues/49",
+            "number": 49,
+            "comments_count": 0,
+            "created_at": "2018-11-18T13:56:05.000Z"
+          },
+          {
+            "title": "Functions’ identifiers shouldn’t be allowed to be constructed from empty strings",
+            "url": "https://github.com/hadronized/glsl/issues/48",
+            "number": 48,
+            "comments_count": 0,
+            "created_at": "2018-11-18T13:54:35.000Z"
+          },
+          {
+            "title": "Add `Identifier` as a type, not an alias",
+            "url": "https://github.com/hadronized/glsl/issues/47",
+            "number": 47,
+            "comments_count": 1,
+            "created_at": "2018-11-18T13:54:15.000Z"
+          },
+          {
+            "title": "Use piglit shader_runner tests in CI",
+            "url": "https://github.com/hadronized/glsl/issues/34",
+            "number": 34,
+            "comments_count": 0,
+            "created_at": "2018-05-19T15:13:01.000Z"
+          },
+          {
+            "title": "SPIR-V transpiler",
+            "url": "https://github.com/hadronized/glsl/issues/21",
+            "number": 21,
+            "comments_count": 1,
+            "created_at": "2017-08-03T19:34:55.000Z"
+          }
+        ]
+      },
+      {
+        "name": "eskom-calendar",
+        "owner": "beyarkay",
+        "description": "Get your loadshedding schedule in your calendar and never be left in the dark! Open-source, up-to-date, and developer friendly.",
+        "language": "Rust",
+        "url": "https://github.com/beyarkay/eskom-calendar",
+        "stars": 190,
+        "last_modified": "2024-04-28T18:15:33.000Z",
+        "id": "513533067",
+        "issues": [
+          {
+            "title": "Each release, cache the ICS files and only push the changed files",
+            "url": "https://github.com/beyarkay/eskom-calendar/issues/462",
+            "number": 462,
+            "comments_count": 0,
+            "created_at": "2023-08-13T08:40:01.000Z"
+          },
+          {
+            "title": "Create a script to assert that newly added CSV files are properly formatted",
+            "url": "https://github.com/beyarkay/eskom-calendar/issues/197",
+            "number": 197,
+            "comments_count": 1,
+            "created_at": "2022-12-14T08:18:32.000Z"
+          },
+          {
+            "title": "Investigate/analyse eskom status reports",
+            "url": "https://github.com/beyarkay/eskom-calendar/issues/179",
+            "number": 179,
+            "comments_count": 0,
+            "created_at": "2022-11-30T15:48:12.000Z"
+          },
+          {
+            "title": "Auto-retry GH actions on Server Errors",
+            "url": "https://github.com/beyarkay/eskom-calendar/issues/98",
+            "number": 98,
+            "comments_count": 0,
+            "created_at": "2022-09-30T07:48:25.000Z"
+          },
+          {
+            "title": "Making the calendar language agnostic",
+            "url": "https://github.com/beyarkay/eskom-calendar/issues/87",
+            "number": 87,
+            "comments_count": 1,
+            "created_at": "2022-09-24T09:34:09.000Z"
+          },
+          {
+            "title": "Add FAQ to readme",
+            "url": "https://github.com/beyarkay/eskom-calendar/issues/72",
+            "number": 72,
+            "comments_count": 0,
+            "created_at": "2022-09-22T10:37:36.000Z"
+          },
+          {
+            "title": "Automatically parse tweets into loadshedding changes",
+            "url": "https://github.com/beyarkay/eskom-calendar/issues/50",
+            "number": 50,
+            "comments_count": 11,
+            "created_at": "2022-09-16T12:19:08.000Z"
+          }
+        ]
+      },
+      {
+        "name": "rusty",
+        "owner": "PLC-lang",
+        "description": "Structured Text Parser and LLVM Frontend",
+        "language": "Rust",
+        "url": "https://github.com/PLC-lang/rusty",
+        "stars": 188,
+        "last_modified": "2024-06-24T15:05:59.000Z",
+        "id": "223592087",
+        "issues": [
+          {
+            "title": "Hint user that a POU instance is missing",
+            "url": "https://github.com/PLC-lang/rusty/issues/1235",
+            "number": 1235,
+            "comments_count": 0,
+            "created_at": "2024-06-05T08:39:30.000Z"
+          },
+          {
+            "title": "Validate if paths in `include_path` exist",
+            "url": "https://github.com/PLC-lang/rusty/issues/1215",
+            "number": 1215,
+            "comments_count": 0,
+            "created_at": "2024-04-26T09:40:53.000Z"
+          },
+          {
+            "title": "show warning for BOOL-INT downcast",
+            "url": "https://github.com/PLC-lang/rusty/issues/1167",
+            "number": 1167,
+            "comments_count": 4,
+            "created_at": "2024-03-20T09:48:49.000Z"
+          },
+          {
+            "title": "Sort error codes within their categories when printing with `plc config diagnostics`",
+            "url": "https://github.com/PLC-lang/rusty/issues/1158",
+            "number": 1158,
+            "comments_count": 1,
+            "created_at": "2024-03-15T08:23:04.000Z"
+          },
+          {
+            "title": "Missing conversion functions",
+            "url": "https://github.com/PLC-lang/rusty/issues/1117",
+            "number": 1117,
+            "comments_count": 4,
+            "created_at": "2024-03-05T08:40:43.000Z"
+          },
+          {
+            "title": "Add validation for comparison operators",
+            "url": "https://github.com/PLC-lang/rusty/issues/1026",
+            "number": 1026,
+            "comments_count": 0,
+            "created_at": "2023-11-23T10:45:21.000Z"
+          },
+          {
+            "title": "Trailing comma in array elements",
+            "url": "https://github.com/PLC-lang/rusty/issues/1021",
+            "number": 1021,
+            "comments_count": 2,
+            "created_at": "2023-11-21T09:30:50.000Z"
+          },
+          {
+            "title": "Division by const 0 should be an error",
+            "url": "https://github.com/PLC-lang/rusty/issues/1009",
+            "number": 1009,
+            "comments_count": 0,
+            "created_at": "2023-11-09T14:52:22.000Z"
+          },
+          {
+            "title": "`--ast` flag",
+            "url": "https://github.com/PLC-lang/rusty/issues/1003",
+            "number": 1003,
+            "comments_count": 0,
+            "created_at": "2023-11-02T11:37:37.000Z"
+          },
+          {
+            "title": "`--annotations` flag",
+            "url": "https://github.com/PLC-lang/rusty/issues/1001",
+            "number": 1001,
+            "comments_count": 0,
+            "created_at": "2023-11-02T11:27:28.000Z"
+          }
+        ]
+      }
+    ],
+    "Go": [
+      {
+        "name": "hertz-examples",
+        "owner": "cloudwego",
+        "description": "Examples for Hertz.",
+        "language": "Go",
+        "url": "https://github.com/cloudwego/hertz-examples",
+        "stars": 200,
+        "last_modified": "2024-06-16T15:41:21.000Z",
+        "id": "491501424",
+        "issues": [
+          {
+            "title": "set so_reuseaddr for client in reverse proxy mode so uses 1 connection to interface with server.",
+            "url": "https://github.com/cloudwego/hertz-examples/issues/137",
+            "number": 137,
+            "comments_count": 3,
+            "created_at": "2024-03-21T21:24:48.000Z"
+          },
+          {
+            "title": "possible to do a rate limit example in terms of bandwidth? e.g. rate limited by 100kb/second",
+            "url": "https://github.com/cloudwego/hertz-examples/issues/131",
+            "number": 131,
+            "comments_count": 1,
+            "created_at": "2024-03-01T06:30:35.000Z"
+          },
+          {
+            "title": "Feature request: Using hertz to complete a github data analysis project",
+            "url": "https://github.com/cloudwego/hertz-examples/issues/126",
+            "number": 126,
+            "comments_count": 1,
+            "created_at": "2023-12-18T14:15:26.000Z"
+          }
+        ]
+      },
+      {
+        "name": "kube-reqsizer",
+        "owner": "ElementTech",
+        "description": "A Kubernetes controller for automatically optimizing pod requests based on their continuous usage. VPA alternative that can work with HPA.",
+        "language": "Go",
+        "url": "https://github.com/ElementTech/kube-reqsizer",
+        "stars": 196,
+        "last_modified": "2024-02-09T18:00:52.000Z",
+        "id": "578573082",
+        "issues": [
+          {
+            "title": "Hot reload configuration from configmap without needing pod restart",
+            "url": "https://github.com/ElementTech/kube-reqsizer/issues/18",
+            "number": 18,
+            "comments_count": 2,
+            "created_at": "2022-12-20T11:36:24.000Z"
+          },
+          {
+            "title": "Add support for Custom CRDs like Argo Rollouts",
+            "url": "https://github.com/ElementTech/kube-reqsizer/issues/14",
+            "number": 14,
+            "comments_count": 0,
+            "created_at": "2022-12-20T08:13:18.000Z"
+          },
+          {
+            "title": "Add Go Tests",
+            "url": "https://github.com/ElementTech/kube-reqsizer/issues/9",
+            "number": 9,
+            "comments_count": 2,
+            "created_at": "2022-12-19T14:55:18.000Z"
+          }
+        ]
+      },
+      {
+        "name": "wescale",
+        "owner": "wesql",
+        "description": "WeScale is a database proxy that cares about your application, the development experience, and supports OnlineDDL.",
+        "language": "Go",
+        "url": "https://github.com/wesql/wescale",
+        "stars": 192,
+        "last_modified": "2024-06-24T15:43:26.000Z",
+        "id": "618261121",
+        "issues": [
+          {
+            "title": "[Enhancement Request] Format the output of 'show create filter [filterName]'",
+            "url": "https://github.com/wesql/wescale/issues/505",
+            "number": 505,
+            "comments_count": 0,
+            "created_at": "2024-05-30T08:44:09.000Z"
+          },
+          {
+            "title": "[Enhancement Request] Fine-Grained GTID Support for Improved Read-After-Write Performance",
+            "url": "https://github.com/wesql/wescale/issues/472",
+            "number": 472,
+            "comments_count": 4,
+            "created_at": "2024-04-03T08:05:46.000Z"
+          },
+          {
+            "title": "[Enhancement Request] Rewrite EndToEnd Testcase Using Dependency Injection Pattern",
+            "url": "https://github.com/wesql/wescale/issues/260",
+            "number": 260,
+            "comments_count": 0,
+            "created_at": "2023-09-11T07:06:12.000Z"
+          },
+          {
+            "title": "Feature Request: Add hint to support routing queries to vttablet by tablet alias",
+            "url": "https://github.com/wesql/wescale/issues/225",
+            "number": 225,
+            "comments_count": 2,
+            "created_at": "2023-08-02T05:48:54.000Z"
+          },
+          {
+            "title": "Feature Request: Add client-side test for WeSQL-Scale",
+            "url": "https://github.com/wesql/wescale/issues/155",
+            "number": 155,
+            "comments_count": 0,
+            "created_at": "2023-06-25T04:05:24.000Z"
+          }
+        ]
+      },
+      {
+        "name": "wanix",
+        "owner": "tractordev",
+        "description": "Experimental, local-first, web-native, Unix-like development environment",
+        "language": "Go",
+        "url": "https://github.com/tractordev/wanix",
+        "stars": 195,
+        "last_modified": "2024-04-26T22:01:52.000Z",
+        "id": "705385007",
+        "issues": [
+          {
+            "title": "confirm mobile support",
+            "url": "https://github.com/tractordev/wanix/issues/73",
+            "number": 73,
+            "comments_count": 0,
+            "created_at": "2024-01-23T08:43:45.000Z"
+          },
+          {
+            "title": "fix process cleanup exception",
+            "url": "https://github.com/tractordev/wanix/issues/34",
+            "number": 34,
+            "comments_count": 0,
+            "created_at": "2023-12-06T17:52:09.000Z"
+          },
+          {
+            "title": "zipfs: port from afero",
+            "url": "https://github.com/tractordev/wanix/issues/19",
+            "number": 19,
+            "comments_count": 0,
+            "created_at": "2023-11-17T19:20:33.000Z"
+          }
+        ]
+      },
+      {
+        "name": "cluster-api-provider-metal3",
+        "owner": "metal3-io",
+        "description": "Metal³ integration with https://github.com/kubernetes-sigs/cluster-api",
+        "language": "Go",
+        "url": "https://github.com/metal3-io/cluster-api-provider-metal3",
+        "stars": 193,
+        "last_modified": "2024-06-24T15:17:35.000Z",
+        "id": "245087984",
+        "issues": [
+          {
+            "title": "Create an event sequence documentation of the remediation based e2e tests [CAPM3]",
+            "url": "https://github.com/metal3-io/cluster-api-provider-metal3/issues/1554",
+            "number": 1554,
+            "comments_count": 2,
+            "created_at": "2024-03-20T14:19:02.000Z"
+          },
+          {
+            "title": "Create an event sequence documentation of the pivoting based e2e tests [CAPM3]",
+            "url": "https://github.com/metal3-io/cluster-api-provider-metal3/issues/1553",
+            "number": 1553,
+            "comments_count": 4,
+            "created_at": "2024-03-20T13:56:40.000Z"
+          },
+          {
+            "title": "Document live_iso test, focus on sequence of events [CAPM3]",
+            "url": "https://github.com/metal3-io/cluster-api-provider-metal3/issues/1552",
+            "number": 1552,
+            "comments_count": 2,
+            "created_at": "2024-03-20T13:51:07.000Z"
+          },
+          {
+            "title": "Unify/fix log messages",
+            "url": "https://github.com/metal3-io/cluster-api-provider-metal3/issues/1550",
+            "number": 1550,
+            "comments_count": 4,
+            "created_at": "2024-03-20T13:35:48.000Z"
+          },
+          {
+            "title": "E2E: log.SetLogger(...) was never called",
+            "url": "https://github.com/metal3-io/cluster-api-provider-metal3/issues/1482",
+            "number": 1482,
+            "comments_count": 8,
+            "created_at": "2024-03-01T08:58:17.000Z"
+          }
+        ]
+      },
+      {
+        "name": "hypersdk",
+        "owner": "ava-labs",
+        "description": "Opinionated Framework for Building Hyper-Scalable Blockchains on Avalanche",
+        "language": "Go",
+        "url": "https://github.com/ava-labs/hypersdk",
+        "stars": 190,
+        "last_modified": "2024-06-24T17:38:15.000Z",
+        "id": "603937105",
+        "issues": [
+          {
+            "title": "[docs] Create map of package interaction",
+            "url": "https://github.com/ava-labs/hypersdk/issues/663",
+            "number": 663,
+            "comments_count": 1,
+            "created_at": "2024-01-02T18:35:22.000Z"
+          },
+          {
+            "title": "[crypto/ed25519] Add metrics for cache hit rate",
+            "url": "https://github.com/ava-labs/hypersdk/issues/347",
+            "number": 347,
+            "comments_count": 1,
+            "created_at": "2023-08-11T21:21:16.000Z"
+          },
+          {
+            "title": "[morpheus/tokenvm] move `e2e` helpers to a shared package",
+            "url": "https://github.com/ava-labs/hypersdk/issues/265",
+            "number": 265,
+            "comments_count": 3,
+            "created_at": "2023-07-22T19:31:23.000Z"
+          },
+          {
+            "title": "[morpheusvm/tokenvm] move `integration` helpers to a shared package",
+            "url": "https://github.com/ava-labs/hypersdk/issues/264",
+            "number": 264,
+            "comments_count": 16,
+            "created_at": "2023-07-22T19:30:52.000Z"
+          },
+          {
+            "title": "[morpheusvm/tokenvm] move `scripts` to a shared directory",
+            "url": "https://github.com/ava-labs/hypersdk/issues/263",
+            "number": 263,
+            "comments_count": 7,
+            "created_at": "2023-07-22T19:30:26.000Z"
+          },
+          {
+            "title": "Migrate from Zipkin/Prometheus to Uptrace",
+            "url": "https://github.com/ava-labs/hypersdk/issues/230",
+            "number": 230,
+            "comments_count": 3,
+            "created_at": "2023-07-06T00:32:56.000Z"
+          },
+          {
+            "title": "`TestServerPublishSpecific` is flaky",
+            "url": "https://github.com/ava-labs/hypersdk/issues/212",
+            "number": 212,
+            "comments_count": 3,
+            "created_at": "2023-06-22T17:34:56.000Z"
+          },
+          {
+            "title": "Add tests for network module",
+            "url": "https://github.com/ava-labs/hypersdk/issues/193",
+            "number": 193,
+            "comments_count": 1,
+            "created_at": "2023-05-31T17:05:59.000Z"
+          }
+        ]
+      },
+      {
+        "name": "modelmesh-serving",
+        "owner": "kserve",
+        "description": "Controller for ModelMesh",
+        "language": "Go",
+        "url": "https://github.com/kserve/modelmesh-serving",
+        "stars": 189,
+        "last_modified": "2024-06-21T20:56:57.000Z",
+        "id": "384568852",
+        "issues": [
+          {
+            "title": "Add some python client examples to the docs",
+            "url": "https://github.com/kserve/modelmesh-serving/issues/316",
+            "number": 316,
+            "comments_count": 4,
+            "created_at": "2023-01-18T22:41:44.000Z"
+          },
+          {
+            "title": "Remove residual \"Watson\" references",
+            "url": "https://github.com/kserve/modelmesh-serving/issues/292",
+            "number": 292,
+            "comments_count": 7,
+            "created_at": "2022-12-14T23:29:16.000Z"
+          },
+          {
+            "title": "Allow config of id extraction for custom gRPC service methods",
+            "url": "https://github.com/kserve/modelmesh-serving/issues/228",
+            "number": 228,
+            "comments_count": 1,
+            "created_at": "2022-09-07T23:25:58.000Z"
+          }
+        ]
+      },
+      {
+        "name": "lifecycle",
+        "owner": "buildpacks",
+        "description": "Reference implementation of the Cloud Native Buildpacks lifecycle",
+        "language": "Go",
+        "url": "https://github.com/buildpacks/lifecycle",
+        "stars": 185,
+        "last_modified": "2024-06-19T09:23:05.000Z",
+        "id": "129179482",
+        "issues": [
+          {
+            "title": "Improve CVE automation",
+            "url": "https://github.com/buildpacks/lifecycle/issues/1021",
+            "number": 1021,
+            "comments_count": 2,
+            "created_at": "2023-02-23T02:24:33.000Z"
+          },
+          {
+            "title": "FIXMEs in the code",
+            "url": "https://github.com/buildpacks/lifecycle/issues/914",
+            "number": 914,
+            "comments_count": 3,
+            "created_at": "2022-09-22T14:55:47.000Z"
+          },
+          {
+            "title": "Add automation to re-generate sample builders when lifecycle is published",
+            "url": "https://github.com/buildpacks/lifecycle/issues/801",
+            "number": 801,
+            "comments_count": 5,
+            "created_at": "2022-02-10T16:46:27.000Z"
+          },
+          {
+            "title": "Rebaser Acceptance Tests",
+            "url": "https://github.com/buildpacks/lifecycle/issues/469",
+            "number": 469,
+            "comments_count": 12,
+            "created_at": "2020-11-16T16:07:02.000Z"
+          },
+          {
+            "title": "Extend Creator Acceptance Tests",
+            "url": "https://github.com/buildpacks/lifecycle/issues/468",
+            "number": 468,
+            "comments_count": 7,
+            "created_at": "2020-11-16T16:05:58.000Z"
+          },
+          {
+            "title": "Extend Exporter Acceptance Tests",
+            "url": "https://github.com/buildpacks/lifecycle/issues/467",
+            "number": 467,
+            "comments_count": 2,
+            "created_at": "2020-11-16T16:03:58.000Z"
+          },
+          {
+            "title": "Extend Restorer Acceptance Tests",
+            "url": "https://github.com/buildpacks/lifecycle/issues/465",
+            "number": 465,
+            "comments_count": 3,
+            "created_at": "2020-11-16T16:01:32.000Z"
+          }
+        ]
+      }
+    ],
+    "Java": [
+      {
+        "name": "inspectit-ocelot",
+        "owner": "inspectIT",
+        "description": "inspectIT Ocelot - Java agent for collecting application performance, tracing and behavior data",
+        "language": "Java",
+        "url": "https://github.com/inspectIT/inspectit-ocelot",
+        "stars": 200,
+        "last_modified": "2024-06-23T10:07:57.000Z",
+        "id": "160148747",
+        "issues": [
+          {
+            "title": "[Feature] - Improve code style and layout of StatusTable.js",
+            "url": "https://github.com/inspectIT/inspectit-ocelot/issues/1538",
+            "number": 1538,
+            "comments_count": 0,
+            "created_at": "2022-11-14T11:41:00.000Z"
+          },
+          {
+            "title": "[Feature] - Add order/priority of the Configuration Sources to the configuration",
+            "url": "https://github.com/inspectIT/inspectit-ocelot/issues/1523",
+            "number": 1523,
+            "comments_count": 1,
+            "created_at": "2022-09-08T06:00:50.000Z"
+          },
+          {
+            "title": "[Bug] - File Tree jumps to top when saving",
+            "url": "https://github.com/inspectIT/inspectit-ocelot/issues/1478",
+            "number": 1478,
+            "comments_count": 0,
+            "created_at": "2022-06-15T06:09:36.000Z"
+          },
+          {
+            "title": "[Feature] - Add possibility to use Multiple Editor Tabs in the Config Server UI",
+            "url": "https://github.com/inspectIT/inspectit-ocelot/issues/1403",
+            "number": 1403,
+            "comments_count": 0,
+            "created_at": "2022-04-25T07:37:36.000Z"
+          },
+          {
+            "title": "[Feature] - Conventional Commit Template for InspectIT ",
+            "url": "https://github.com/inspectIT/inspectit-ocelot/issues/1323",
+            "number": 1323,
+            "comments_count": 0,
+            "created_at": "2022-02-28T06:19:47.000Z"
+          },
+          {
+            "title": "Add Tests for FileInfoVisitor",
+            "url": "https://github.com/inspectIT/inspectit-ocelot/issues/1150",
+            "number": 1150,
+            "comments_count": 0,
+            "created_at": "2021-07-26T14:04:28.000Z"
+          },
+          {
+            "title": "Configurable base path for the configuration server's web-UI",
+            "url": "https://github.com/inspectIT/inspectit-ocelot/issues/601",
+            "number": 601,
+            "comments_count": 5,
+            "created_at": "2020-03-09T08:52:24.000Z"
+          },
+          {
+            "title": "Adding documentation on how to configure business transactions",
+            "url": "https://github.com/inspectIT/inspectit-ocelot/issues/372",
+            "number": 372,
+            "comments_count": 0,
+            "created_at": "2019-08-23T06:43:38.000Z"
+          }
+        ]
+      },
+      {
+        "name": "Concurnas",
+        "owner": "Concurnas",
+        "description": "=Please be aware that Concurnas is no longer in active development = Concurnas is an open source JVM programming language designed for building reliable, scalable, high performance concurrent, distributed and parallel systems",
+        "language": "Java",
+        "url": "https://github.com/Concurnas/Concurnas",
+        "stars": 199,
+        "last_modified": "2023-10-10T10:13:31.000Z",
+        "id": "225905477",
+        "issues": [
+          {
+            "title": "Some filenames cause compilation to fail",
+            "url": "https://github.com/Concurnas/Concurnas/issues/70",
+            "number": 70,
+            "comments_count": 1,
+            "created_at": "2021-07-04T02:03:06.000Z"
+          },
+          {
+            "title": "Permit Patten matching on list length",
+            "url": "https://github.com/Concurnas/Concurnas/issues/69",
+            "number": 69,
+            "comments_count": 0,
+            "created_at": "2021-05-07T12:39:57.000Z"
+          },
+          {
+            "title": "Better multi-type checking support",
+            "url": "https://github.com/Concurnas/Concurnas/issues/50",
+            "number": 50,
+            "comments_count": 1,
+            "created_at": "2020-06-04T22:22:50.000Z"
+          },
+          {
+            "title": "repl /vars command to output type",
+            "url": "https://github.com/Concurnas/Concurnas/issues/47",
+            "number": 47,
+            "comments_count": 2,
+            "created_at": "2020-06-02T22:22:06.000Z"
+          },
+          {
+            "title": "Allow conc command to pass through JVM args",
+            "url": "https://github.com/Concurnas/Concurnas/issues/46",
+            "number": 46,
+            "comments_count": 0,
+            "created_at": "2020-06-02T15:34:58.000Z"
+          },
+          {
+            "title": "concc to generate fat jar's",
+            "url": "https://github.com/Concurnas/Concurnas/issues/41",
+            "number": 41,
+            "comments_count": 0,
+            "created_at": "2020-05-30T00:50:52.000Z"
+          },
+          {
+            "title": "'99 problems' for Concurnas",
+            "url": "https://github.com/Concurnas/Concurnas/issues/39",
+            "number": 39,
+            "comments_count": 0,
+            "created_at": "2020-05-27T02:36:39.000Z"
+          },
+          {
+            "title": "Add type system graph to documentation",
+            "url": "https://github.com/Concurnas/Concurnas/issues/38",
+            "number": 38,
+            "comments_count": 0,
+            "created_at": "2020-05-27T02:19:19.000Z"
+          },
+          {
+            "title": "highlight.js support",
+            "url": "https://github.com/Concurnas/Concurnas/issues/19",
+            "number": 19,
+            "comments_count": 0,
+            "created_at": "2020-02-24T14:47:23.000Z"
+          },
+          {
+            "title": "Add conc langauge support for Github",
+            "url": "https://github.com/Concurnas/Concurnas/issues/17",
+            "number": 17,
+            "comments_count": 0,
+            "created_at": "2020-02-10T12:42:23.000Z"
+          }
+        ]
+      },
+      {
+        "name": "sdk-java",
+        "owner": "temporalio",
+        "description": "Temporal Java SDK",
+        "language": "Java",
+        "url": "https://github.com/temporalio/sdk-java",
+        "stars": 199,
+        "last_modified": "2024-06-21T20:17:31.000Z",
+        "id": "215840316",
+        "issues": [
+          {
+            "title": "Allow to get the retry policy set for execution from client via WorkflowInfo",
+            "url": "https://github.com/temporalio/sdk-java/issues/1866",
+            "number": 1866,
+            "comments_count": 0,
+            "created_at": "2023-09-21T15:33:46.000Z"
+          },
+          {
+            "title": "inconsistency on MaximumAttempts attribute between local activities and \"normal\" activities",
+            "url": "https://github.com/temporalio/sdk-java/issues/1727",
+            "number": 1727,
+            "comments_count": 0,
+            "created_at": "2023-03-31T14:01:01.000Z"
+          },
+          {
+            "title": "Activity stub throws IllegalArgumentException from toString method",
+            "url": "https://github.com/temporalio/sdk-java/issues/1536",
+            "number": 1536,
+            "comments_count": 3,
+            "created_at": "2022-11-26T18:04:46.000Z"
+          }
+        ]
+      }
+    ],
+    "Python": [
+      {
+        "name": "RepoAgent",
+        "owner": "OpenBMB",
+        "description": "An LLM-powered repository agent designed to assist developers and teams in generating documentation and understanding repositories quickly.",
+        "language": "Python",
+        "url": "https://github.com/OpenBMB/RepoAgent",
+        "stars": 201,
+        "last_modified": "2024-04-19T02:46:20.000Z",
+        "id": "724564445",
+        "issues": [
+          {
+            "title": "Questions: tree sitter, git, ollama",
+            "url": "https://github.com/OpenBMB/RepoAgent/issues/60",
+            "number": 60,
+            "comments_count": 10,
+            "created_at": "2024-03-04T19:52:51.000Z"
+          },
+          {
+            "title": "生成文档的时候出现了递归溢出",
+            "url": "https://github.com/OpenBMB/RepoAgent/issues/59",
+            "number": 59,
+            "comments_count": 4,
+            "created_at": "2024-03-04T12:12:36.000Z"
+          },
+          {
+            "title": "Solution about Document tutorial & README generation",
+            "url": "https://github.com/OpenBMB/RepoAgent/issues/35",
+            "number": 35,
+            "comments_count": 6,
+            "created_at": "2024-01-10T14:08:50.000Z"
+          }
+        ]
+      },
+      {
+        "name": "icepyx",
+        "owner": "icesat2py",
+        "description": "Python tools for obtaining and working with ICESat-2 data",
+        "language": "Python",
+        "url": "https://github.com/icesat2py/icepyx",
+        "stars": 198,
+        "last_modified": "2024-06-24T13:57:44.000Z",
+        "id": "193000761",
+        "issues": [
+          {
+            "title": "become PEP8 compliant",
+            "url": "https://github.com/icesat2py/icepyx/issues/486",
+            "number": 486,
+            "comments_count": 0,
+            "created_at": "2023-12-22T19:02:44.000Z"
+          },
+          {
+            "title": "update ICESat-2 resource guide",
+            "url": "https://github.com/icesat2py/icepyx/issues/412",
+            "number": 412,
+            "comments_count": 1,
+            "created_at": "2023-03-16T15:57:26.000Z"
+          },
+          {
+            "title": "conda-forge download statistics",
+            "url": "https://github.com/icesat2py/icepyx/issues/301",
+            "number": 301,
+            "comments_count": 0,
+            "created_at": "2022-03-29T15:41:27.000Z"
+          },
+          {
+            "title": "Extracting asc/descending tracks in high latitudes (regions 4 and 11)",
+            "url": "https://github.com/icesat2py/icepyx/issues/300",
+            "number": 300,
+            "comments_count": 4,
+            "created_at": "2022-03-29T14:00:01.000Z"
+          },
+          {
+            "title": "recreate DEM comparison notebook",
+            "url": "https://github.com/icesat2py/icepyx/issues/264",
+            "number": 264,
+            "comments_count": 2,
+            "created_at": "2022-01-24T22:26:33.000Z"
+          },
+          {
+            "title": "add page size checks for sync/async request mode",
+            "url": "https://github.com/icesat2py/icepyx/issues/243",
+            "number": 243,
+            "comments_count": 2,
+            "created_at": "2021-11-09T17:29:45.000Z"
+          },
+          {
+            "title": "downloaded file unzipping and sorting",
+            "url": "https://github.com/icesat2py/icepyx/issues/33",
+            "number": 33,
+            "comments_count": 0,
+            "created_at": "2020-03-11T14:38:17.000Z"
+          },
+          {
+            "title": "update and expand our automated testing functions",
+            "url": "https://github.com/icesat2py/icepyx/issues/19",
+            "number": 19,
+            "comments_count": 0,
+            "created_at": "2020-02-14T19:25:10.000Z"
+          },
+          {
+            "title": "interacting with the file system",
+            "url": "https://github.com/icesat2py/icepyx/issues/15",
+            "number": 15,
+            "comments_count": 1,
+            "created_at": "2020-02-10T21:15:58.000Z"
+          }
+        ]
+      },
+      {
+        "name": "bancho.py",
+        "owner": "osuAkatsuki",
+        "description": "An osu! server implementation optimized for maintainability in modern python",
+        "language": "Python",
+        "url": "https://github.com/osuAkatsuki/bancho.py",
+        "stars": 199,
+        "last_modified": "2024-06-19T16:53:28.000Z",
+        "id": "275804990",
+        "issues": [
+          {
+            "title": "feat: make !purge to clear user plays - e.g. they are blatant/other.",
+            "url": "https://github.com/osuAkatsuki/bancho.py/issues/645",
+            "number": 645,
+            "comments_count": 12,
+            "created_at": "2024-03-01T18:51:07.000Z"
+          },
+          {
+            "title": "feat: make !recent work with offline players",
+            "url": "https://github.com/osuAkatsuki/bancho.py/issues/638",
+            "number": 638,
+            "comments_count": 0,
+            "created_at": "2024-02-26T03:40:10.000Z"
+          },
+          {
+            "title": "bug: output for offline users in !user command is confusing",
+            "url": "https://github.com/osuAkatsuki/bancho.py/issues/637",
+            "number": 637,
+            "comments_count": 1,
+            "created_at": "2024-02-26T03:30:45.000Z"
+          },
+          {
+            "title": "bug: !top doesn't work with offline players",
+            "url": "https://github.com/osuAkatsuki/bancho.py/issues/636",
+            "number": 636,
+            "comments_count": 1,
+            "created_at": "2024-02-26T03:23:05.000Z"
+          },
+          {
+            "title": "refactor: implement repositories ",
+            "url": "https://github.com/osuAkatsuki/bancho.py/issues/495",
+            "number": 495,
+            "comments_count": 4,
+            "created_at": "2023-09-21T13:07:20.000Z"
+          },
+          {
+            "title": "misc: project smell tracker",
+            "url": "https://github.com/osuAkatsuki/bancho.py/issues/494",
+            "number": 494,
+            "comments_count": 2,
+            "created_at": "2023-09-21T12:48:27.000Z"
+          },
+          {
+            "title": "`/api/get_player_info` only includes clan id - should include clan object",
+            "url": "https://github.com/osuAkatsuki/bancho.py/issues/190",
+            "number": 190,
+            "comments_count": 0,
+            "created_at": "2022-03-18T15:29:39.000Z"
+          }
+        ]
+      },
+      {
+        "name": "INGInious",
+        "owner": "UCL-INGI",
+        "description": "INGInious is a secure and automated exercises assessment platform using your own tests, also providing a pluggable interface with your existing LMS.",
+        "language": "Python",
+        "url": "https://github.com/UCL-INGI/INGInious",
+        "stars": 197,
+        "last_modified": "2024-05-17T13:29:27.000Z",
+        "id": "22579572",
+        "issues": [
+          {
+            "title": "[frontend/task_edit] Subproblems are not shown in specified order.",
+            "url": "https://github.com/UCL-INGI/INGInious/issues/1001",
+            "number": 1001,
+            "comments_count": 1,
+            "created_at": "2024-04-09T12:28:24.000Z"
+          },
+          {
+            "title": "[frontend/plugins/scoreboard] edit config via frontend",
+            "url": "https://github.com/UCL-INGI/INGInious/issues/1000",
+            "number": 1000,
+            "comments_count": 0,
+            "created_at": "2024-03-28T13:19:46.000Z"
+          },
+          {
+            "title": "[course_admin/submissions] lighten CSV outputs",
+            "url": "https://github.com/UCL-INGI/INGInious/issues/936",
+            "number": 936,
+            "comments_count": 0,
+            "created_at": "2023-04-07T13:43:29.000Z"
+          },
+          {
+            "title": "Replace setup.py by pyproject.toml",
+            "url": "https://github.com/UCL-INGI/INGInious/issues/893",
+            "number": 893,
+            "comments_count": 0,
+            "created_at": "2022-11-25T13:52:20.000Z"
+          },
+          {
+            "title": "[frontend/submissions] Automatic join of users information in CSV exports",
+            "url": "https://github.com/UCL-INGI/INGInious/issues/891",
+            "number": 891,
+            "comments_count": 0,
+            "created_at": "2022-11-07T07:14:59.000Z"
+          },
+          {
+            "title": "Make Weblate happy",
+            "url": "https://github.com/UCL-INGI/INGInious/issues/881",
+            "number": 881,
+            "comments_count": 0,
+            "created_at": "2022-10-20T09:06:59.000Z"
+          },
+          {
+            "title": "Make Codacy happy",
+            "url": "https://github.com/UCL-INGI/INGInious/issues/880",
+            "number": 880,
+            "comments_count": 0,
+            "created_at": "2022-10-20T08:44:41.000Z"
+          },
+          {
+            "title": "Support for SVG in get_imageblock",
+            "url": "https://github.com/UCL-INGI/INGInious/issues/867",
+            "number": 867,
+            "comments_count": 2,
+            "created_at": "2022-09-29T09:31:30.000Z"
+          },
+          {
+            "title": "Add multiple languages in the onboarding tutorial",
+            "url": "https://github.com/UCL-INGI/INGInious/issues/862",
+            "number": 862,
+            "comments_count": 0,
+            "created_at": "2022-09-15T09:41:40.000Z"
+          },
+          {
+            "title": "[inginious-backend] ZMQ functions deprecated",
+            "url": "https://github.com/UCL-INGI/INGInious/issues/800",
+            "number": 800,
+            "comments_count": 0,
+            "created_at": "2022-03-11T11:39:24.000Z"
+          }
+        ]
+      },
+      {
+        "name": "XPlane2Blender",
+        "owner": "X-Plane",
+        "description": "Scenery & Aircraft export addon for Blender and X-Plane",
+        "language": "Python",
+        "url": "https://github.com/X-Plane/XPlane2Blender",
+        "stars": 194,
+        "last_modified": "2024-06-18T13:45:25.000Z",
+        "id": "828085",
+        "issues": [
+          {
+            "title": "GLOBAL_ blend-ing states must be mutually exclusive",
+            "url": "https://github.com/X-Plane/XPlane2Blender/issues/632",
+            "number": 632,
+            "comments_count": 0,
+            "created_at": "2021-01-15T17:42:14.000Z"
+          },
+          {
+            "title": "Custom Footer Comment",
+            "url": "https://github.com/X-Plane/XPlane2Blender/issues/624",
+            "number": 624,
+            "comments_count": 0,
+            "created_at": "2020-12-16T17:50:18.000Z"
+          },
+          {
+            "title": "Add wheel support for Drag Rotate manipulators",
+            "url": "https://github.com/X-Plane/XPlane2Blender/issues/621",
+            "number": 621,
+            "comments_count": 0,
+            "created_at": "2020-12-08T22:36:23.000Z"
+          },
+          {
+            "title": "Validate TEXTURE field that texture does not have spaces in it",
+            "url": "https://github.com/X-Plane/XPlane2Blender/issues/577",
+            "number": 577,
+            "comments_count": 0,
+            "created_at": "2020-06-19T14:11:30.000Z"
+          },
+          {
+            "title": "280: LOD Additive Mode validation for no double draw",
+            "url": "https://github.com/X-Plane/XPlane2Blender/issues/520",
+            "number": 520,
+            "comments_count": 0,
+            "created_at": "2020-01-09T15:43:53.000Z"
+          },
+          {
+            "title": "Show/Hide only allowed on Objects, shown on Armature/Bone Panel UI",
+            "url": "https://github.com/X-Plane/XPlane2Blender/issues/516",
+            "number": 516,
+            "comments_count": 0,
+            "created_at": "2020-01-03T16:19:05.000Z"
+          },
+          {
+            "title": "280: Camera Collision allowed in Aircraft Export Type",
+            "url": "https://github.com/X-Plane/XPlane2Blender/issues/515",
+            "number": 515,
+            "comments_count": 0,
+            "created_at": "2019-12-31T16:08:11.000Z"
+          },
+          {
+            "title": "No validation for textures having a space in the file name",
+            "url": "https://github.com/X-Plane/XPlane2Blender/issues/473",
+            "number": 473,
+            "comments_count": 0,
+            "created_at": "2019-09-19T22:33:34.000Z"
+          },
+          {
+            "title": "Make unittest's output more reasonable",
+            "url": "https://github.com/X-Plane/XPlane2Blender/issues/408",
+            "number": 408,
+            "comments_count": 6,
+            "created_at": "2019-01-01T16:54:29.000Z"
+          },
+          {
+            "title": "Block use of sim/multiplayer datarefs",
+            "url": "https://github.com/X-Plane/XPlane2Blender/issues/405",
+            "number": 405,
+            "comments_count": 2,
+            "created_at": "2018-12-07T18:35:13.000Z"
+          }
+        ]
+      },
+      {
+        "name": "heat",
+        "owner": "helmholtz-analytics",
+        "description": "Distributed tensors and Machine Learning framework with GPU and MPI acceleration in Python",
+        "language": "Python",
+        "url": "https://github.com/helmholtz-analytics/heat",
+        "stars": 195,
+        "last_modified": "2024-06-24T15:48:08.000Z",
+        "id": "133808899",
+        "issues": [
+          {
+            "title": "Update implementation of `meshgrid` w.r.t. new PyTorch-meshgrid",
+            "url": "https://github.com/helmholtz-analytics/heat/issues/1231",
+            "number": 1231,
+            "comments_count": 4,
+            "created_at": "2023-10-06T14:04:07.000Z"
+          },
+          {
+            "title": "Extend kwargs `out`, `where` to all binary operations",
+            "url": "https://github.com/helmholtz-analytics/heat/issues/958",
+            "number": 958,
+            "comments_count": 2,
+            "created_at": "2022-04-06T13:47:04.000Z"
+          },
+          {
+            "title": "Module `linalg`: replace `factories.array()` with `DNDarray` construct where possible",
+            "url": "https://github.com/helmholtz-analytics/heat/issues/818",
+            "number": 818,
+            "comments_count": 2,
+            "created_at": "2021-06-23T09:08:13.000Z"
+          },
+          {
+            "title": "Module `_operations`: replace `factories.array()` with `DNDarray` construct where possible",
+            "url": "https://github.com/helmholtz-analytics/heat/issues/804",
+            "number": 804,
+            "comments_count": 2,
+            "created_at": "2021-06-14T09:34:17.000Z"
+          },
+          {
+            "title": "Module `manipulations`: replace `factories.array()` with `DNDarray` construct where possible",
+            "url": "https://github.com/helmholtz-analytics/heat/issues/799",
+            "number": 799,
+            "comments_count": 3,
+            "created_at": "2021-06-14T09:31:00.000Z"
+          },
+          {
+            "title": "Implement `argsort`",
+            "url": "https://github.com/helmholtz-analytics/heat/issues/777",
+            "number": 777,
+            "comments_count": 2,
+            "created_at": "2021-05-26T10:01:30.000Z"
+          },
+          {
+            "title": "GaussianNB distributed results deviate from the scikit-learn results",
+            "url": "https://github.com/helmholtz-analytics/heat/issues/771",
+            "number": 771,
+            "comments_count": 2,
+            "created_at": "2021-05-12T09:21:35.000Z"
+          },
+          {
+            "title": "Examples for distance calculations",
+            "url": "https://github.com/helmholtz-analytics/heat/issues/484",
+            "number": 484,
+            "comments_count": 1,
+            "created_at": "2020-02-11T14:49:14.000Z"
+          },
+          {
+            "title": "Implement isin() (and in1d())",
+            "url": "https://github.com/helmholtz-analytics/heat/issues/450",
+            "number": 450,
+            "comments_count": 3,
+            "created_at": "2020-01-16T13:35:37.000Z"
+          },
+          {
+            "title": "Clean up concatenate using redistribute",
+            "url": "https://github.com/helmholtz-analytics/heat/issues/430",
+            "number": 430,
+            "comments_count": 2,
+            "created_at": "2019-12-10T08:37:57.000Z"
+          }
+        ]
+      },
+      {
+        "name": "ConfigSpace",
+        "owner": "automl",
+        "description": "Domain specific language for configuration spaces in Python/Cython. Useful for hyperparameter optimization and algorithm configuration.",
+        "language": "Python",
+        "url": "https://github.com/automl/ConfigSpace",
+        "stars": 191,
+        "last_modified": "2024-06-20T17:11:24.000Z",
+        "id": "55232127",
+        "issues": [
+          {
+            "title": "Create TruncatedNormalHyperparameter",
+            "url": "https://github.com/automl/ConfigSpace/issues/302",
+            "number": 302,
+            "comments_count": 2,
+            "created_at": "2023-02-24T16:39:51.000Z"
+          },
+          {
+            "title": "[Feature] Make `ufhp` of `UniformIntegerHyperparameter` public like `NormalIntegerHyperparameter` ",
+            "url": "https://github.com/automl/ConfigSpace/issues/291",
+            "number": 291,
+            "comments_count": 1,
+            "created_at": "2023-01-19T02:45:11.000Z"
+          },
+          {
+            "title": "[Doc] Document the `value` of `UniformFloatHyperparameter` should be in [0, 1]",
+            "url": "https://github.com/automl/ConfigSpace/issues/290",
+            "number": 290,
+            "comments_count": 1,
+            "created_at": "2023-01-18T20:05:03.000Z"
+          },
+          {
+            "title": "[Bug] Ordinal Hyperparameter ignores `number` argument in `get_neighbors`",
+            "url": "https://github.com/automl/ConfigSpace/issues/288",
+            "number": 288,
+            "comments_count": 1,
+            "created_at": "2023-01-18T19:27:44.000Z"
+          },
+          {
+            "title": "[Bug] NormalFloatHyperparameter `get_neighbors` ignores transform argument",
+            "url": "https://github.com/automl/ConfigSpace/issues/287",
+            "number": 287,
+            "comments_count": 1,
+            "created_at": "2023-01-18T19:11:24.000Z"
+          },
+          {
+            "title": "Why can't OrdinalHyperparameter have weights?",
+            "url": "https://github.com/automl/ConfigSpace/issues/271",
+            "number": 271,
+            "comments_count": 2,
+            "created_at": "2022-09-15T09:15:59.000Z"
+          },
+          {
+            "title": "Add `check_default` to `Constant` for uniformity with other hyperparameters",
+            "url": "https://github.com/automl/ConfigSpace/issues/270",
+            "number": 270,
+            "comments_count": 1,
+            "created_at": "2022-09-13T22:03:01.000Z"
+          },
+          {
+            "title": "`default_value` not part of the hash",
+            "url": "https://github.com/automl/ConfigSpace/issues/238",
+            "number": 238,
+            "comments_count": 1,
+            "created_at": "2022-03-02T13:08:52.000Z"
+          },
+          {
+            "title": "[Maint]  Typing for `is_legal` can be made more explicit ",
+            "url": "https://github.com/automl/ConfigSpace/issues/237",
+            "number": 237,
+            "comments_count": 1,
+            "created_at": "2022-02-25T15:18:07.000Z"
+          },
+          {
+            "title": "Conduct documentation link checks on build",
+            "url": "https://github.com/automl/ConfigSpace/issues/234",
+            "number": 234,
+            "comments_count": 0,
+            "created_at": "2022-02-04T15:30:25.000Z"
+          }
+        ]
+      },
+      {
+        "name": "spinalcordtoolbox",
+        "owner": "spinalcordtoolbox",
+        "description": "Comprehensive and open-source library of analysis tools for MRI of the spinal cord.",
+        "language": "Python",
+        "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox",
+        "stars": 191,
+        "last_modified": "2024-06-22T16:30:19.000Z",
+        "id": "20361729",
+        "issues": [
+          {
+            "title": "Upload `batch_processing.sh` CSV files as artifacts during CI run",
+            "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/4412",
+            "number": 4412,
+            "comments_count": 0,
+            "created_at": "2024-03-22T03:14:02.000Z"
+          },
+          {
+            "title": "Verify whether the `isct_test_ants` test is actually useful for testing ANTs",
+            "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3935",
+            "number": 3935,
+            "comments_count": 4,
+            "created_at": "2022-11-07T19:55:23.000Z"
+          },
+          {
+            "title": "`find_and_sort_coord` function handles empty-array input errors in an unclear way",
+            "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3785",
+            "number": 3785,
+            "comments_count": 6,
+            "created_at": "2022-04-29T13:57:10.000Z"
+          },
+          {
+            "title": "Volume values rescaled by sagittal flattening",
+            "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3737",
+            "number": 3737,
+            "comments_count": 3,
+            "created_at": "2022-03-15T21:58:24.000Z"
+          },
+          {
+            "title": "Fixup tests to make the `pytest` output less wordy",
+            "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3704",
+            "number": 3704,
+            "comments_count": 2,
+            "created_at": "2022-03-01T18:45:18.000Z"
+          },
+          {
+            "title": "Mention in the usage that the function works with the `-ses` subfolders",
+            "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3628",
+            "number": 3628,
+            "comments_count": 1,
+            "created_at": "2021-12-17T16:14:41.000Z"
+          },
+          {
+            "title": "Do not crash installation when `$SHELL` is unrecognized",
+            "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3580",
+            "number": 3580,
+            "comments_count": 3,
+            "created_at": "2021-11-16T14:56:55.000Z"
+          },
+          {
+            "title": "Fold `-initlabel` functionality into the `-discfile` option",
+            "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3528",
+            "number": 3528,
+            "comments_count": 0,
+            "created_at": "2021-10-04T15:30:21.000Z"
+          },
+          {
+            "title": "Rename the title of the \"Computing shape metrics for PAM50-registered data\" tutorial section",
+            "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3513",
+            "number": 3513,
+            "comments_count": 0,
+            "created_at": "2021-09-03T13:37:37.000Z"
+          },
+          {
+            "title": "Doc: change PAM50 image",
+            "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3505",
+            "number": 3505,
+            "comments_count": 2,
+            "created_at": "2021-08-20T10:00:25.000Z"
+          }
+        ]
+      },
+      {
+        "name": "junction",
+        "owner": "pythonindia",
+        "description": "Junction is a software to manage proposals, reviews, schedule, feedback during conference.",
+        "language": "Python",
+        "url": "https://github.com/pythonindia/junction",
+        "stars": 191,
+        "last_modified": "2024-05-22T09:56:36.000Z",
+        "id": "27966694",
+        "issues": [
+          {
+            "title": "Issues with voting on Proposals",
+            "url": "https://github.com/pythonindia/junction/issues/714",
+            "number": 714,
+            "comments_count": 3,
+            "created_at": "2020-07-27T19:11:46.000Z"
+          },
+          {
+            "title": "Markdown list render issue",
+            "url": "https://github.com/pythonindia/junction/issues/704",
+            "number": 704,
+            "comments_count": 3,
+            "created_at": "2020-06-28T06:43:47.000Z"
+          },
+          {
+            "title": "Image or Mathematical equation support in Markdown",
+            "url": "https://github.com/pythonindia/junction/issues/703",
+            "number": 703,
+            "comments_count": 7,
+            "created_at": "2020-06-26T17:07:56.000Z"
+          },
+          {
+            "title": "Add yarn install to CI",
+            "url": "https://github.com/pythonindia/junction/issues/642",
+            "number": 642,
+            "comments_count": 1,
+            "created_at": "2020-03-21T06:22:44.000Z"
+          },
+          {
+            "title": "Create a management code to export reviewers vote",
+            "url": "https://github.com/pythonindia/junction/issues/553",
+            "number": 553,
+            "comments_count": 11,
+            "created_at": "2017-11-03T06:11:23.000Z"
+          },
+          {
+            "title": "Add instructions in Readme for Mac users",
+            "url": "https://github.com/pythonindia/junction/issues/545",
+            "number": 545,
+            "comments_count": 1,
+            "created_at": "2017-09-15T08:48:24.000Z"
+          },
+          {
+            "title": "Add additional field called display_name in profile model",
+            "url": "https://github.com/pythonindia/junction/issues/264",
+            "number": 264,
+            "comments_count": 25,
+            "created_at": "2015-05-30T07:28:56.000Z"
+          },
+          {
+            "title": "Proposal Create/Update Page - Provide the link to the Guidelines",
+            "url": "https://github.com/pythonindia/junction/issues/91",
+            "number": 91,
+            "comments_count": 5,
+            "created_at": "2015-01-28T07:24:16.000Z"
+          }
+        ]
+      },
+      {
+        "name": "FLamby",
+        "owner": "owkin",
+        "description": "Cross-silo Federated Learning playground in Python. Discover 7 real-world federated datasets to test your new FL strategies and try to beat the leaderboard.  ",
+        "language": "Python",
+        "url": "https://github.com/owkin/FLamby",
+        "stars": 189,
+        "last_modified": "2024-06-19T10:04:16.000Z",
+        "id": "463146427",
+        "issues": [
+          {
+            "title": "Adding docs on metrics and evaluation function for each dataset",
+            "url": "https://github.com/owkin/FLamby/issues/278",
+            "number": 278,
+            "comments_count": 0,
+            "created_at": "2023-04-09T20:17:44.000Z"
+          },
+          {
+            "title": "Doc enhancement: explain more clearly datasets and associated hyperparameters",
+            "url": "https://github.com/owkin/FLamby/issues/264",
+            "number": 264,
+            "comments_count": 1,
+            "created_at": "2022-12-14T14:45:50.000Z"
+          },
+          {
+            "title": "Factorize calc_aggregated_delta_weights across fed_avg and fed_opt",
+            "url": "https://github.com/owkin/FLamby/issues/68",
+            "number": 68,
+            "comments_count": 0,
+            "created_at": "2022-05-09T09:23:06.000Z"
+          },
+          {
+            "title": "Add proper testing for AdaGrad, Yogi and FedAvg based on FedAdam testing",
+            "url": "https://github.com/owkin/FLamby/issues/67",
+            "number": 67,
+            "comments_count": 0,
+            "created_at": "2022-05-09T09:18:36.000Z"
+          }
+        ]
+      },
+      {
+        "name": "ucx",
+        "owner": "databrickslabs",
+        "description": "Your best companion for upgrading to Unity Catalog. UCX will guide you, the Databricks customer, through the process of upgrading your account, groups, workspaces, jobs etc. to Unity Catalog.",
+        "language": "Python",
+        "url": "https://github.com/databrickslabs/ucx",
+        "stars": 189,
+        "last_modified": "2024-06-24T15:32:07.000Z",
+        "id": "611841497",
+        "issues": [
+          {
+            "title": "[FEATURE]: Add a link to redirect incompatible job runs towards",
+            "url": "https://github.com/databrickslabs/ucx/issues/1070",
+            "number": 1070,
+            "comments_count": 3,
+            "created_at": "2024-03-18T09:58:55.000Z"
+          },
+          {
+            "title": "[FEATURE]: Add `reconfigure-group-migration` command",
+            "url": "https://github.com/databrickslabs/ucx/issues/880",
+            "number": 880,
+            "comments_count": 2,
+            "created_at": "2024-02-05T11:31:58.000Z"
+          },
+          {
+            "title": "[FEATURE]: cluster assessment should assess MLR with shared mode cluster",
+            "url": "https://github.com/databrickslabs/ucx/issues/846",
+            "number": 846,
+            "comments_count": 2,
+            "created_at": "2024-01-26T02:38:28.000Z"
+          },
+          {
+            "title": "Create a job to self-update the installation of the project",
+            "url": "https://github.com/databrickslabs/ucx/issues/274",
+            "number": 274,
+            "comments_count": 0,
+            "created_at": "2023-09-22T14:37:06.000Z"
+          }
+        ]
+      },
+      {
+        "name": "lea",
+        "owner": "carbonfact",
+        "description": "🏃‍♀️ Minimalist alternative to dbt",
+        "language": "Python",
+        "url": "https://github.com/carbonfact/lea",
+        "stars": 189,
+        "last_modified": "2024-05-31T17:36:32.000Z",
+        "id": "702144171",
+        "issues": [
+          {
+            "title": "BigQuery tests",
+            "url": "https://github.com/carbonfact/lea/issues/28",
+            "number": 28,
+            "comments_count": 0,
+            "created_at": "2024-01-05T17:27:25.000Z"
+          },
+          {
+            "title": "Table usage statistics from query logs",
+            "url": "https://github.com/carbonfact/lea/issues/22",
+            "number": 22,
+            "comments_count": 0,
+            "created_at": "2023-12-01T07:39:56.000Z"
+          },
+          {
+            "title": "Mallow views",
+            "url": "https://github.com/carbonfact/lea/issues/18",
+            "number": 18,
+            "comments_count": 6,
+            "created_at": "2023-12-01T07:28:21.000Z"
+          },
+          {
+            "title": "Cost estimation of running a refresh",
+            "url": "https://github.com/carbonfact/lea/issues/10",
+            "number": 10,
+            "comments_count": 0,
+            "created_at": "2023-11-10T23:28:45.000Z"
+          },
+          {
+            "title": "Shell auto-completion",
+            "url": "https://github.com/carbonfact/lea/issues/8",
+            "number": 8,
+            "comments_count": 0,
+            "created_at": "2023-11-10T23:23:12.000Z"
+          },
+          {
+            "title": "Return correct exit code when something goes wrong",
+            "url": "https://github.com/carbonfact/lea/issues/7",
+            "number": 7,
+            "comments_count": 0,
+            "created_at": "2023-11-10T23:21:03.000Z"
+          }
+        ]
+      },
+      {
+        "name": "cadwyn",
+        "owner": "zmievsa",
+        "description": "Production-ready community-driven modern Stripe-like API versioning in FastAPI",
+        "language": "Python",
+        "url": "https://github.com/zmievsa/cadwyn",
+        "stars": 185,
+        "last_modified": "2024-06-17T22:57:53.000Z",
+        "id": "652774401",
+        "issues": [
+          {
+            "title": "Add `schema(...).field(...).had(json_schema_extra=...)` argument",
+            "url": "https://github.com/zmievsa/cadwyn/issues/112",
+            "number": 112,
+            "comments_count": 3,
+            "created_at": "2023-12-22T15:11:08.000Z"
+          },
+          {
+            "title": "Add an ability to migrate `media_type` and `background` in `ResponseInfo`",
+            "url": "https://github.com/zmievsa/cadwyn/issues/111",
+            "number": 111,
+            "comments_count": 0,
+            "created_at": "2023-12-22T15:08:35.000Z"
+          },
+          {
+            "title": "Increase `VersionChange.__name__` quality",
+            "url": "https://github.com/zmievsa/cadwyn/issues/110",
+            "number": 110,
+            "comments_count": 0,
+            "created_at": "2023-12-22T14:55:11.000Z"
+          },
+          {
+            "title": "Increase `VersionChange.description` quality",
+            "url": "https://github.com/zmievsa/cadwyn/issues/109",
+            "number": 109,
+            "comments_count": 0,
+            "created_at": "2023-12-22T14:53:53.000Z"
+          },
+          {
+            "title": "Raise an error when a request/response migration cannot be connected to any endpoint",
+            "url": "https://github.com/zmievsa/cadwyn/issues/108",
+            "number": 108,
+            "comments_count": 0,
+            "created_at": "2023-12-22T14:15:45.000Z"
+          },
+          {
+            "title": "Add allcontributors similar to litestar ",
+            "url": "https://github.com/zmievsa/cadwyn/issues/97",
+            "number": 97,
+            "comments_count": 0,
+            "created_at": "2023-12-09T22:43:44.000Z"
+          },
+          {
+            "title": "Add an ability to modify pydantic schema configuration",
+            "url": "https://github.com/zmievsa/cadwyn/issues/91",
+            "number": 91,
+            "comments_count": 0,
+            "created_at": "2023-12-03T13:01:29.000Z"
+          },
+          {
+            "title": "Add support for `endpoint(...)` operations for non-api routes",
+            "url": "https://github.com/zmievsa/cadwyn/issues/67",
+            "number": 67,
+            "comments_count": 0,
+            "created_at": "2023-10-09T06:47:41.000Z"
+          },
+          {
+            "title": "Add support for python 3.9",
+            "url": "https://github.com/zmievsa/cadwyn/issues/61",
+            "number": 61,
+            "comments_count": 0,
+            "created_at": "2023-09-25T22:56:50.000Z"
+          },
+          {
+            "title": "Collect changelog from migrations",
+            "url": "https://github.com/zmievsa/cadwyn/issues/43",
+            "number": 43,
+            "comments_count": 2,
+            "created_at": "2023-09-18T19:31:40.000Z"
+          }
+        ]
+      }
+    ],
+    "C#": [
+      {
+        "name": "nats.net.v2",
+        "owner": "nats-io",
+        "description": "Full Async C# / .NET client for NATS",
+        "language": "C#",
+        "url": "https://github.com/nats-io/nats.net.v2",
+        "stars": 200,
+        "last_modified": "2024-06-24T10:20:10.000Z",
+        "id": "503422934",
+        "issues": [
+          {
+            "title": "Add filtering to KV method returning all keys",
+            "url": "https://github.com/nats-io/nats.net.v2/issues/521",
+            "number": 521,
+            "comments_count": 0,
+            "created_at": "2024-06-20T07:52:19.000Z"
+          },
+          {
+            "title": "Ensure full coverage of KV management methods",
+            "url": "https://github.com/nats-io/nats.net.v2/issues/510",
+            "number": 510,
+            "comments_count": 0,
+            "created_at": "2024-06-07T10:47:37.000Z"
+          },
+          {
+            "title": "Add (force) reconnect method",
+            "url": "https://github.com/nats-io/nats.net.v2/issues/479",
+            "number": 479,
+            "comments_count": 1,
+            "created_at": "2024-04-16T00:45:17.000Z"
+          },
+          {
+            "title": "Support consumer pause",
+            "url": "https://github.com/nats-io/nats.net.v2/issues/477",
+            "number": 477,
+            "comments_count": 0,
+            "created_at": "2024-04-16T00:42:42.000Z"
+          },
+          {
+            "title": "Improve documentation",
+            "url": "https://github.com/nats-io/nats.net.v2/issues/345",
+            "number": 345,
+            "comments_count": 1,
+            "created_at": "2024-01-22T13:35:15.000Z"
+          },
+          {
+            "title": "Add OTEL Metrics",
+            "url": "https://github.com/nats-io/nats.net.v2/issues/316",
+            "number": 316,
+            "comments_count": 0,
+            "created_at": "2024-01-10T12:24:04.000Z"
+          }
+        ]
+      }
+    ],
+    "Scala": [
+      {
+        "name": "scala-collection-compat",
+        "owner": "scala",
+        "description": "makes some Scala 2.13 APIs (primarily collections, also some others) available on 2.11 and 2.12, to aid cross-building",
+        "language": "Scala",
+        "url": "https://github.com/scala/scala-collection-compat",
+        "stars": 199,
+        "last_modified": "2024-06-14T22:09:20.000Z",
+        "id": "125521135",
+        "issues": [
+          {
+            "title": "`Left#withRight` and `Right#withLeft`",
+            "url": "https://github.com/scala/scala-collection-compat/issues/632",
+            "number": 632,
+            "comments_count": 0,
+            "created_at": "2023-10-02T11:17:07.000Z"
+          },
+          {
+            "title": "TraversableOnce rewritten as IterableOnceIterableOnce",
+            "url": "https://github.com/scala/scala-collection-compat/issues/477",
+            "number": 477,
+            "comments_count": 1,
+            "created_at": "2021-08-10T08:38:11.000Z"
+          },
+          {
+            "title": "Add compat for higherKinds compiler flag",
+            "url": "https://github.com/scala/scala-collection-compat/issues/431",
+            "number": 431,
+            "comments_count": 0,
+            "created_at": "2021-02-26T00:24:57.000Z"
+          },
+          {
+            "title": "Rewrite rule for Map#mapValues should call .view",
+            "url": "https://github.com/scala/scala-collection-compat/issues/216",
+            "number": 216,
+            "comments_count": 4,
+            "created_at": "2019-06-10T15:29:41.000Z"
+          },
+          {
+            "title": "Add `SortedSet.unsorted` and `SortedMap.unsorted`",
+            "url": "https://github.com/scala/scala-collection-compat/issues/95",
+            "number": 95,
+            "comments_count": 5,
+            "created_at": "2018-07-13T11:13:11.000Z"
+          },
+          {
+            "title": "add *inPlace compatibility for 2.12.",
+            "url": "https://github.com/scala/scala-collection-compat/issues/90",
+            "number": 90,
+            "comments_count": 3,
+            "created_at": "2018-07-10T08:21:22.000Z"
+          }
+        ]
+      },
+      {
+        "name": "fs2-aws",
+        "owner": "laserdisc-io",
+        "description": "fs2 utilities to interact with AWS",
+        "language": "Scala",
+        "url": "https://github.com/laserdisc-io/fs2-aws",
+        "stars": 187,
+        "last_modified": "2024-06-24T18:05:17.000Z",
+        "id": "117368091",
+        "issues": [
+          {
+            "title": "DynamoDB write items",
+            "url": "https://github.com/laserdisc-io/fs2-aws/issues/15",
+            "number": 15,
+            "comments_count": 0,
+            "created_at": "2018-10-26T10:07:57.000Z"
+          },
+          {
+            "title": "KMS Client side decryption",
+            "url": "https://github.com/laserdisc-io/fs2-aws/issues/12",
+            "number": 12,
+            "comments_count": 0,
+            "created_at": "2018-10-26T10:04:09.000Z"
+          },
+          {
+            "title": "KMS Client side encryption",
+            "url": "https://github.com/laserdisc-io/fs2-aws/issues/11",
+            "number": 11,
+            "comments_count": 0,
+            "created_at": "2018-10-26T10:03:20.000Z"
+          },
+          {
+            "title": "SQS Producer",
+            "url": "https://github.com/laserdisc-io/fs2-aws/issues/9",
+            "number": 9,
+            "comments_count": 0,
+            "created_at": "2018-10-26T09:59:02.000Z"
+          },
+          {
+            "title": "SNS Message producer",
+            "url": "https://github.com/laserdisc-io/fs2-aws/issues/8",
+            "number": 8,
+            "comments_count": 0,
+            "created_at": "2018-10-26T09:56:46.000Z"
+          }
+        ]
+      }
+    ],
+    "JavaScript": [
+      {
+        "name": "client",
+        "owner": "nos",
+        "description": "The nOS Client",
+        "language": "JavaScript",
+        "url": "https://github.com/nos/client",
+        "stars": 199,
+        "last_modified": "2024-06-18T21:16:33.000Z",
+        "id": "121267259",
+        "issues": [
+          {
+            "title": "Add ability to insert whole balance when sending assets",
+            "url": "https://github.com/nos/client/issues/982",
+            "number": 982,
+            "comments_count": 0,
+            "created_at": "2019-05-16T15:48:22.000Z"
+          },
+          {
+            "title": "Tabs should be moveable/sortable",
+            "url": "https://github.com/nos/client/issues/367",
+            "number": 367,
+            "comments_count": 0,
+            "created_at": "2018-07-29T12:33:29.000Z"
+          },
+          {
+            "title": "New tab should get focus on url field",
+            "url": "https://github.com/nos/client/issues/192",
+            "number": 192,
+            "comments_count": 3,
+            "created_at": "2018-05-31T13:22:18.000Z"
+          },
+          {
+            "title": "Unit - integration tests of the nOS API",
+            "url": "https://github.com/nos/client/issues/137",
+            "number": 137,
+            "comments_count": 6,
+            "created_at": "2018-05-10T15:23:08.000Z"
+          }
+        ]
+      },
+      {
+        "name": "Numbas",
+        "owner": "numbas",
+        "description": "A completely browser-based e-assessment/e-learning system, with an emphasis on mathematics",
+        "language": "JavaScript",
+        "url": "https://github.com/numbas/Numbas",
+        "stars": 196,
+        "last_modified": "2024-06-19T18:28:30.000Z",
+        "id": "1659192",
+        "issues": [
+          {
+            "title": "Number entry: add an input hint \"Write your answer as a fraction\", shown when \"must be reduced\" is false",
+            "url": "https://github.com/numbas/Numbas/issues/1069",
+            "number": 1069,
+            "comments_count": 2,
+            "created_at": "2023-12-19T11:01:51.000Z"
+          },
+          {
+            "title": "\"Begin blank\" option for drop-down list",
+            "url": "https://github.com/numbas/Numbas/issues/974",
+            "number": 974,
+            "comments_count": 4,
+            "created_at": "2022-12-12T14:18:10.000Z"
+          },
+          {
+            "title": "Add an end exam button for menu mode",
+            "url": "https://github.com/numbas/Numbas/issues/917",
+            "number": 917,
+            "comments_count": 10,
+            "created_at": "2022-06-08T11:19:44.000Z"
+          },
+          {
+            "title": "Internationalise the tick and cross feedback symbols",
+            "url": "https://github.com/numbas/Numbas/issues/874",
+            "number": 874,
+            "comments_count": 8,
+            "created_at": "2021-12-02T08:47:59.000Z"
+          },
+          {
+            "title": "Theme to display all the questions at once",
+            "url": "https://github.com/numbas/Numbas/issues/622",
+            "number": 622,
+            "comments_count": 0,
+            "created_at": "2019-06-10T08:44:31.000Z"
+          }
+        ]
+      },
+      {
+        "name": "js-sdk",
+        "owner": "dapr",
+        "description": "Dapr SDK for Javascript",
+        "language": "JavaScript",
+        "url": "https://github.com/dapr/js-sdk",
+        "stars": 192,
+        "last_modified": "2024-06-18T20:27:17.000Z",
+        "id": "193125024",
+        "issues": [
+          {
+            "title": "Standardize README with shield badges",
+            "url": "https://github.com/dapr/js-sdk/issues/594",
+            "number": 594,
+            "comments_count": 0,
+            "created_at": "2024-05-08T13:15:10.000Z"
+          },
+          {
+            "title": "Improved developer experience for error handling",
+            "url": "https://github.com/dapr/js-sdk/issues/567",
+            "number": 567,
+            "comments_count": 4,
+            "created_at": "2024-01-29T15:40:54.000Z"
+          },
+          {
+            "title": "tests(workflow): add E2E tests for workflows management",
+            "url": "https://github.com/dapr/js-sdk/issues/498",
+            "number": 498,
+            "comments_count": 0,
+            "created_at": "2023-06-08T05:25:28.000Z"
+          },
+          {
+            "title": "Non-happy path state operations",
+            "url": "https://github.com/dapr/js-sdk/issues/477",
+            "number": 477,
+            "comments_count": 0,
+            "created_at": "2023-04-18T22:48:33.000Z"
+          },
+          {
+            "title": "Helper methods to propagate trace headers",
+            "url": "https://github.com/dapr/js-sdk/issues/434",
+            "number": 434,
+            "comments_count": 3,
+            "created_at": "2023-01-05T00:32:09.000Z"
+          },
+          {
+            "title": "Setup examples with mechanical-markdown",
+            "url": "https://github.com/dapr/js-sdk/issues/385",
+            "number": 385,
+            "comments_count": 0,
+            "created_at": "2022-09-30T05:18:11.000Z"
+          },
+          {
+            "title": "Add documentation for configuration subscribe",
+            "url": "https://github.com/dapr/js-sdk/issues/351",
+            "number": 351,
+            "comments_count": 0,
+            "created_at": "2022-09-02T16:40:39.000Z"
+          },
+          {
+            "title": "Missing metadata from client state.qeury",
+            "url": "https://github.com/dapr/js-sdk/issues/318",
+            "number": 318,
+            "comments_count": 4,
+            "created_at": "2022-07-07T18:43:33.000Z"
+          },
+          {
+            "title": "Cleanup: Create custom method unsupported errors",
+            "url": "https://github.com/dapr/js-sdk/issues/297",
+            "number": 297,
+            "comments_count": 2,
+            "created_at": "2022-06-13T05:20:53.000Z"
+          },
+          {
+            "title": "Type adoptation and Prefixing with \"T\"",
+            "url": "https://github.com/dapr/js-sdk/issues/279",
+            "number": 279,
+            "comments_count": 0,
+            "created_at": "2022-05-31T15:35:49.000Z"
+          }
+        ]
+      },
+      {
+        "name": "scan-action",
+        "owner": "anchore",
+        "description": "Anchore container analysis and scan provided as a GitHub Action",
+        "language": "JavaScript",
+        "url": "https://github.com/anchore/scan-action",
+        "stars": 192,
+        "last_modified": "2024-06-19T04:22:42.000Z",
+        "id": "212692077",
+        "issues": [
+          {
+            "title": "Update the actions runtime to Node.js 20",
+            "url": "https://github.com/anchore/scan-action/issues/276",
+            "number": 276,
+            "comments_count": 3,
+            "created_at": "2024-01-29T16:13:08.000Z"
+          },
+          {
+            "title": "Add `output-file` as an input param",
+            "url": "https://github.com/anchore/scan-action/issues/216",
+            "number": 216,
+            "comments_count": 1,
+            "created_at": "2023-03-04T18:58:01.000Z"
+          },
+          {
+            "title": "Automatic feedback of scan results as PR comment",
+            "url": "https://github.com/anchore/scan-action/issues/162",
+            "number": 162,
+            "comments_count": 12,
+            "created_at": "2022-04-06T14:47:57.000Z"
+          }
+        ]
+      },
+      {
+        "name": "CubeCobra",
+        "owner": "dekkerglen",
+        "description": "An open source web application for building, managing, and playtesting Magic the Gathering cubes.",
+        "language": "JavaScript",
+        "url": "https://github.com/dekkerglen/CubeCobra",
+        "stars": 186,
+        "last_modified": "2024-06-05T21:23:10.000Z",
+        "id": "199488444",
+        "issues": [
+          {
+            "title": "Add pre-flipped MDFCs to card library",
+            "url": "https://github.com/dekkerglen/CubeCobra/issues/2218",
+            "number": 2218,
+            "comments_count": 4,
+            "created_at": "2021-12-14T17:09:40.000Z"
+          },
+          {
+            "title": "Replace time ago component with actual dates",
+            "url": "https://github.com/dekkerglen/CubeCobra/issues/2146",
+            "number": 2146,
+            "comments_count": 1,
+            "created_at": "2021-07-15T14:27:45.000Z"
+          },
+          {
+            "title": "Add popularity as an analytic characteristic",
+            "url": "https://github.com/dekkerglen/CubeCobra/issues/2143",
+            "number": 2143,
+            "comments_count": 0,
+            "created_at": "2021-07-12T16:54:39.000Z"
+          },
+          {
+            "title": "Adjust scrollbar for dark mode",
+            "url": "https://github.com/dekkerglen/CubeCobra/issues/1770",
+            "number": 1770,
+            "comments_count": 2,
+            "created_at": "2020-12-28T20:11:42.000Z"
+          },
+          {
+            "title": "More color-blind friendly badges",
+            "url": "https://github.com/dekkerglen/CubeCobra/issues/1731",
+            "number": 1731,
+            "comments_count": 5,
+            "created_at": "2020-11-22T02:32:27.000Z"
+          },
+          {
+            "title": "Better search terms for vanguard cards",
+            "url": "https://github.com/dekkerglen/CubeCobra/issues/1656",
+            "number": 1656,
+            "comments_count": 0,
+            "created_at": "2020-10-20T18:37:36.000Z"
+          },
+          {
+            "title": "New card overlay: old foil",
+            "url": "https://github.com/dekkerglen/CubeCobra/issues/1640",
+            "number": 1640,
+            "comments_count": 0,
+            "created_at": "2020-10-12T22:26:58.000Z"
+          },
+          {
+            "title": "Ongoing: Remove files from eslint ignore",
+            "url": "https://github.com/dekkerglen/CubeCobra/issues/1601",
+            "number": 1601,
+            "comments_count": 0,
+            "created_at": "2020-09-12T15:11:23.000Z"
+          },
+          {
+            "title": "Add 'views' count to content",
+            "url": "https://github.com/dekkerglen/CubeCobra/issues/1593",
+            "number": 1593,
+            "comments_count": 2,
+            "created_at": "2020-09-11T17:20:44.000Z"
+          },
+          {
+            "title": "Add cube previews to markdown",
+            "url": "https://github.com/dekkerglen/CubeCobra/issues/1591",
+            "number": 1591,
+            "comments_count": 0,
+            "created_at": "2020-09-11T15:52:32.000Z"
+          }
+        ]
+      },
+      {
+        "name": "rustplusplus",
+        "owner": "alexemanuelol",
+        "description": "A NodeJS Discord Bot that uses the rustplus.js library to utilize the power of the Rust+ Companion App with additional Quality-of-Life features.",
+        "language": "JavaScript",
+        "url": "https://github.com/alexemanuelol/rustplusplus",
+        "stars": 184,
+        "last_modified": "2024-06-23T19:32:18.000Z",
+        "id": "411793174",
+        "issues": [
+          {
+            "title": "Make voice call out other notification and events",
+            "url": "https://github.com/alexemanuelol/rustplusplus/issues/268",
+            "number": 268,
+            "comments_count": 1,
+            "created_at": "2023-11-05T19:22:19.000Z"
+          },
+          {
+            "title": "Add smelting commands discord/ingame",
+            "url": "https://github.com/alexemanuelol/rustplusplus/issues/266",
+            "number": 266,
+            "comments_count": 0,
+            "created_at": "2023-11-05T19:14:33.000Z"
+          },
+          {
+            "title": "[Idea] Add Raid Cost Calculator",
+            "url": "https://github.com/alexemanuelol/rustplusplus/issues/258",
+            "number": 258,
+            "comments_count": 2,
+            "created_at": "2023-10-18T21:33:52.000Z"
+          },
+          {
+            "title": "Create command statistics",
+            "url": "https://github.com/alexemanuelol/rustplusplus/issues/244",
+            "number": 244,
+            "comments_count": 0,
+            "created_at": "2023-09-17T14:20:00.000Z"
+          }
+        ]
+      },
+      {
+        "name": "GetTechProjects",
+        "owner": "SyedImtiyaz-1",
+        "description": "Make your first Pull Request on this Repo. Don't forget to spread love and give us a ⭐️",
+        "language": "JavaScript",
+        "url": "https://github.com/SyedImtiyaz-1/GetTechProjects",
+        "stars": 184,
+        "last_modified": "2024-06-18T04:14:41.000Z",
+        "id": "656382724",
+        "issues": [
+          {
+            "title": "[BUG]: Adding footer in career",
+            "url": "https://github.com/SyedImtiyaz-1/GetTechProjects/issues/548",
+            "number": 548,
+            "comments_count": 2,
+            "created_at": "2024-06-01T16:17:30.000Z"
+          },
+          {
+            "title": "Amazon Clone ",
+            "url": "https://github.com/SyedImtiyaz-1/GetTechProjects/issues/294",
+            "number": 294,
+            "comments_count": 4,
+            "created_at": "2024-05-27T07:54:12.000Z"
+          },
+          {
+            "title": "[BUG]: Chat shows up behind the navbar",
+            "url": "https://github.com/SyedImtiyaz-1/GetTechProjects/issues/53",
+            "number": 53,
+            "comments_count": 3,
+            "created_at": "2023-09-30T09:51:25.000Z"
+          }
+        ]
+      },
+      {
+        "name": "Binari",
+        "owner": "BrandonArmand",
+        "description": "Interactive code editor with a live binary tree visual designed to teach new developers the fundamentals of Data Structures.",
+        "language": "JavaScript",
+        "url": "https://github.com/BrandonArmand/Binari",
+        "stars": 174,
+        "last_modified": "2024-01-09T07:01:51.000Z",
+        "id": "228118187",
+        "issues": [
+          {
+            "title": "DeepScan & Lighthouse Tuning and Fixes",
+            "url": "https://github.com/BrandonArmand/Binari/issues/50",
+            "number": 50,
+            "comments_count": 6,
+            "created_at": "2020-07-13T23:12:27.000Z"
+          },
+          {
+            "title": "Move functions to helper.js files",
+            "url": "https://github.com/BrandonArmand/Binari/issues/25",
+            "number": 25,
+            "comments_count": 12,
+            "created_at": "2020-01-24T21:48:37.000Z"
+          },
+          {
+            "title": "About page crashes on load",
+            "url": "https://github.com/BrandonArmand/Binari/issues/18",
+            "number": 18,
+            "comments_count": 1,
+            "created_at": "2020-01-24T07:27:56.000Z"
+          },
+          {
+            "title": "Lesson Updates",
+            "url": "https://github.com/BrandonArmand/Binari/issues/8",
+            "number": 8,
+            "comments_count": 14,
+            "created_at": "2020-01-23T20:42:24.000Z"
+          },
+          {
+            "title": "Design Work",
+            "url": "https://github.com/BrandonArmand/Binari/issues/7",
+            "number": 7,
+            "comments_count": 7,
+            "created_at": "2020-01-23T18:57:00.000Z"
+          }
+        ]
+      }
+    ],
+    "TypeScript": [
+      {
+        "name": "desktop",
+        "owner": "leather-io",
+        "description": "Manage STX tokens and Stacking",
+        "language": "TypeScript",
+        "url": "https://github.com/leather-io/desktop",
+        "stars": 192,
+        "last_modified": "2024-05-14T14:09:44.000Z",
+        "id": "136364858",
+        "issues": [
+          {
+            "title": "Update package names to reflect brand",
+            "url": "https://github.com/leather-io/desktop/issues/1215",
+            "number": 1215,
+            "comments_count": 0,
+            "created_at": "2023-07-14T18:32:41.000Z"
+          },
+          {
+            "title": "arrow button not working",
+            "url": "https://github.com/leather-io/desktop/issues/1162",
+            "number": 1162,
+            "comments_count": 0,
+            "created_at": "2023-03-14T13:45:35.000Z"
+          },
+          {
+            "title": "Add padding on settings page",
+            "url": "https://github.com/leather-io/desktop/issues/792",
+            "number": 792,
+            "comments_count": 1,
+            "created_at": "2021-05-09T12:11:57.000Z"
+          },
+          {
+            "title": "Improve responsive formatting for transactions",
+            "url": "https://github.com/leather-io/desktop/issues/717",
+            "number": 717,
+            "comments_count": 0,
+            "created_at": "2021-03-26T14:56:06.000Z"
+          },
+          {
+            "title": "Trim trailing slash from node URLs",
+            "url": "https://github.com/leather-io/desktop/issues/715",
+            "number": 715,
+            "comments_count": 1,
+            "created_at": "2021-03-26T14:15:09.000Z"
+          },
+          {
+            "title": "Support localhost for node URL values",
+            "url": "https://github.com/leather-io/desktop/issues/714",
+            "number": 714,
+            "comments_count": 1,
+            "created_at": "2021-03-26T14:02:22.000Z"
+          },
+          {
+            "title": "Improve node form submission button label(s)",
+            "url": "https://github.com/leather-io/desktop/issues/713",
+            "number": 713,
+            "comments_count": 0,
+            "created_at": "2021-03-26T14:00:50.000Z"
+          },
+          {
+            "title": "Display error if configured node can't be reached",
+            "url": "https://github.com/leather-io/desktop/issues/712",
+            "number": 712,
+            "comments_count": 1,
+            "created_at": "2021-03-26T13:59:00.000Z"
+          },
+          {
+            "title": "Add link to Ledger instructions from connection page",
+            "url": "https://github.com/leather-io/desktop/issues/703",
+            "number": 703,
+            "comments_count": 0,
+            "created_at": "2021-03-23T12:15:34.000Z"
+          },
+          {
+            "title": "Add desktop notifications for when Stacking rewards received",
+            "url": "https://github.com/leather-io/desktop/issues/678",
+            "number": 678,
+            "comments_count": 0,
+            "created_at": "2021-03-09T14:29:38.000Z"
+          }
+        ]
+      },
+      {
+        "name": "jbrowse-components",
+        "owner": "GMOD",
+        "description": "Source code for JBrowse 2, a modern React-based genome browser",
+        "language": "TypeScript",
+        "url": "https://github.com/GMOD/jbrowse-components",
+        "stars": 192,
+        "last_modified": "2024-06-24T03:29:22.000Z",
+        "id": "151754121",
+        "issues": [
+          {
+            "title": "Add @jbrowse/cli method to create a MultiQuantitativeTrack",
+            "url": "https://github.com/GMOD/jbrowse-components/issues/3430",
+            "number": 3430,
+            "comments_count": 6,
+            "created_at": "2022-12-29T02:11:41.000Z"
+          },
+          {
+            "title": "Add better UI for desktop auto-updates",
+            "url": "https://github.com/GMOD/jbrowse-components/issues/2603",
+            "number": 2603,
+            "comments_count": 3,
+            "created_at": "2021-12-21T19:31:39.000Z"
+          },
+          {
+            "title": "Support text indexing of  plain text gtf files",
+            "url": "https://github.com/GMOD/jbrowse-components/issues/2486",
+            "number": 2486,
+            "comments_count": 6,
+            "created_at": "2021-11-02T21:02:22.000Z"
+          },
+          {
+            "title": "Create more track type adapters for circular view",
+            "url": "https://github.com/GMOD/jbrowse-components/issues/2240",
+            "number": 2240,
+            "comments_count": 1,
+            "created_at": "2021-08-20T18:55:22.000Z"
+          },
+          {
+            "title": "Make spreadsheet load from data adapters",
+            "url": "https://github.com/GMOD/jbrowse-components/issues/1549",
+            "number": 1549,
+            "comments_count": 1,
+            "created_at": "2020-12-11T19:30:50.000Z"
+          },
+          {
+            "title": "add BAI index (BAM index-index) support to BAM adapter",
+            "url": "https://github.com/GMOD/jbrowse-components/issues/909",
+            "number": 909,
+            "comments_count": 0,
+            "created_at": "2020-05-05T21:39:30.000Z"
+          }
+        ]
+      },
+      {
+        "name": "docker-compose",
+        "owner": "PDMLab",
+        "description": "Manage Docker-Compose via Node.js",
+        "language": "TypeScript",
+        "url": "https://github.com/PDMLab/docker-compose",
+        "stars": 190,
+        "last_modified": "2024-06-16T10:55:55.000Z",
+        "id": "93658106",
+        "issues": [
+          {
+            "title": "Improve detection if \"--detach\" should be set",
+            "url": "https://github.com/PDMLab/docker-compose/issues/272",
+            "number": 272,
+            "comments_count": 2,
+            "created_at": "2024-04-04T14:14:48.000Z"
+          },
+          {
+            "title": "Output ends up in \"err\" instead of \"out\" on macos even when exitCode equals 0",
+            "url": "https://github.com/PDMLab/docker-compose/issues/252",
+            "number": 252,
+            "comments_count": 8,
+            "created_at": "2023-09-07T14:10:52.000Z"
+          },
+          {
+            "title": "Cannot read property 'trim' of undefined when calling docker-compose ps -q",
+            "url": "https://github.com/PDMLab/docker-compose/issues/178",
+            "number": 178,
+            "comments_count": 6,
+            "created_at": "2021-08-07T00:00:15.000Z"
+          }
+        ]
+      },
+      {
+        "name": "matrix-bot-sdk",
+        "owner": "turt2live",
+        "description": "TypeScript/JavaScript SDK for Matrix bots",
+        "language": "TypeScript",
+        "url": "https://github.com/turt2live/matrix-bot-sdk",
+        "stars": 191,
+        "last_modified": "2024-06-16T10:12:48.000Z",
+        "id": "122771554",
+        "issues": [
+          {
+            "title": "Template repository for appservices (bridges)",
+            "url": "https://github.com/turt2live/matrix-bot-sdk/issues/61",
+            "number": 61,
+            "comments_count": 0,
+            "created_at": "2019-11-17T05:22:25.000Z"
+          },
+          {
+            "title": "Define even more event types",
+            "url": "https://github.com/turt2live/matrix-bot-sdk/issues/59",
+            "number": 59,
+            "comments_count": 0,
+            "created_at": "2019-11-16T04:33:33.000Z"
+          },
+          {
+            "title": "Handle M_UNKNOWN_TOKEN as a fatal error",
+            "url": "https://github.com/turt2live/matrix-bot-sdk/issues/19",
+            "number": 19,
+            "comments_count": 0,
+            "created_at": "2019-05-12T21:18:53.000Z"
+          }
+        ]
+      },
+      {
+        "name": "bezier-react",
+        "owner": "channel-io",
+        "description": "React components library that implements Bezier design system.",
+        "language": "TypeScript",
+        "url": "https://github.com/channel-io/bezier-react",
+        "stars": 189,
+        "last_modified": "2024-06-24T12:54:41.000Z",
+        "id": "262985799",
+        "issues": [
+          {
+            "title": "`Button` component should be disabled when it is loading state",
+            "url": "https://github.com/channel-io/bezier-react/issues/2299",
+            "number": 2299,
+            "comments_count": 1,
+            "created_at": "2024-06-20T06:01:22.000Z"
+          },
+          {
+            "title": "Add code tab in storybook to show code preview",
+            "url": "https://github.com/channel-io/bezier-react/issues/2296",
+            "number": 2296,
+            "comments_count": 1,
+            "created_at": "2024-06-20T00:49:24.000Z"
+          },
+          {
+            "title": "`OutlineItem` component does not get focused",
+            "url": "https://github.com/channel-io/bezier-react/issues/2289",
+            "number": 2289,
+            "comments_count": 1,
+            "created_at": "2024-06-17T07:44:54.000Z"
+          },
+          {
+            "title": "Remove fixed width of right item in `TextField` component",
+            "url": "https://github.com/channel-io/bezier-react/issues/2280",
+            "number": 2280,
+            "comments_count": 2,
+            "created_at": "2024-06-14T03:02:37.000Z"
+          },
+          {
+            "title": "Run chromatic action when `bezier-tokens` package changes",
+            "url": "https://github.com/channel-io/bezier-react/issues/2275",
+            "number": 2275,
+            "comments_count": 1,
+            "created_at": "2024-06-10T02:22:33.000Z"
+          },
+          {
+            "title": "Utilize Fima code connect feature",
+            "url": "https://github.com/channel-io/bezier-react/issues/2268",
+            "number": 2268,
+            "comments_count": 1,
+            "created_at": "2024-06-05T02:59:13.000Z"
+          },
+          {
+            "title": "Cancel button of `TextField` component is not focused",
+            "url": "https://github.com/channel-io/bezier-react/issues/2267",
+            "number": 2267,
+            "comments_count": 1,
+            "created_at": "2024-06-04T06:41:47.000Z"
+          },
+          {
+            "title": "Move wiki inside the library code",
+            "url": "https://github.com/channel-io/bezier-react/issues/2147",
+            "number": 2147,
+            "comments_count": 0,
+            "created_at": "2024-04-08T09:07:55.000Z"
+          },
+          {
+            "title": "Explore Storybook 8",
+            "url": "https://github.com/channel-io/bezier-react/issues/2080",
+            "number": 2080,
+            "comments_count": 1,
+            "created_at": "2024-03-15T06:57:20.000Z"
+          },
+          {
+            "title": "Fix `flex-wrap` property of `FormGroup` according to 'direction' property",
+            "url": "https://github.com/channel-io/bezier-react/issues/1720",
+            "number": 1720,
+            "comments_count": 3,
+            "created_at": "2023-11-10T03:02:55.000Z"
+          }
+        ]
+      },
+      {
+        "name": "PerlNavigator",
+        "owner": "bscan",
+        "description": "Perl Language Server that includes syntax checking, perl critic, and code navigation",
+        "language": "TypeScript",
+        "url": "https://github.com/bscan/PerlNavigator",
+        "stars": 188,
+        "last_modified": "2024-06-02T16:11:49.000Z",
+        "id": "449110216",
+        "issues": [
+          {
+            "title": "Add syntax highlighting for Syntax::Keyword::MultiSub",
+            "url": "https://github.com/bscan/PerlNavigator/issues/80",
+            "number": 80,
+            "comments_count": 0,
+            "created_at": "2023-07-10T20:33:19.000Z"
+          },
+          {
+            "title": "Add instructions for usage from npm",
+            "url": "https://github.com/bscan/PerlNavigator/issues/79",
+            "number": 79,
+            "comments_count": 1,
+            "created_at": "2023-07-10T20:29:02.000Z"
+          },
+          {
+            "title": "Instructions for use in Emacs Eglot",
+            "url": "https://github.com/bscan/PerlNavigator/issues/57",
+            "number": 57,
+            "comments_count": 5,
+            "created_at": "2022-12-23T17:13:53.000Z"
+          },
+          {
+            "title": "Automatically detect additional workspace",
+            "url": "https://github.com/bscan/PerlNavigator/issues/55",
+            "number": 55,
+            "comments_count": 4,
+            "created_at": "2022-12-16T10:55:15.000Z"
+          },
+          {
+            "title": "Add \"Parsing Modes\" to disable compiling",
+            "url": "https://github.com/bscan/PerlNavigator/issues/25",
+            "number": 25,
+            "comments_count": 1,
+            "created_at": "2022-06-17T02:16:40.000Z"
+          },
+          {
+            "title": "Add Support for the Testing API",
+            "url": "https://github.com/bscan/PerlNavigator/issues/21",
+            "number": 21,
+            "comments_count": 6,
+            "created_at": "2022-06-17T01:49:18.000Z"
+          }
+        ]
+      },
+      {
+        "name": "monorepo",
+        "owner": "clrfund",
+        "description": "clr.fund dapp",
+        "language": "TypeScript",
+        "url": "https://github.com/clrfund/monorepo",
+        "stars": 188,
+        "last_modified": "2024-06-24T15:19:19.000Z",
+        "id": "240655865",
+        "issues": [
+          {
+            "title": "Fetch BrightIdUserRegistry context from contract",
+            "url": "https://github.com/clrfund/monorepo/issues/440",
+            "number": 440,
+            "comments_count": 0,
+            "created_at": "2022-01-18T21:15:47.000Z"
+          },
+          {
+            "title": "Restyle Reallocation Modal",
+            "url": "https://github.com/clrfund/monorepo/issues/436",
+            "number": 436,
+            "comments_count": 0,
+            "created_at": "2022-01-18T20:28:31.000Z"
+          },
+          {
+            "title": "Add localization",
+            "url": "https://github.com/clrfund/monorepo/issues/285",
+            "number": 285,
+            "comments_count": 2,
+            "created_at": "2021-02-19T20:23:43.000Z"
+          }
+        ]
+      },
+      {
+        "name": "review-app",
+        "owner": "piyushgarg-dev",
+        "description": "Frontend Review Management Application | https://youtu.be/JD3NQsB3TQI",
+        "language": "TypeScript",
+        "url": "https://github.com/piyushgarg-dev/review-app",
+        "stars": 188,
+        "last_modified": "2023-12-16T16:44:17.000Z",
+        "id": "676634169",
+        "issues": [
+          {
+            "title": "feat: contact us section added",
+            "url": "https://github.com/piyushgarg-dev/review-app/pull/277",
+            "number": 277,
+            "comments_count": 2,
+            "created_at": "2023-11-17T15:45:48.000Z"
+          },
+          {
+            "title": "feat: adding ContactUs page",
+            "url": "https://github.com/piyushgarg-dev/review-app/pull/267",
+            "number": 267,
+            "comments_count": 1,
+            "created_at": "2023-10-26T19:37:48.000Z"
+          },
+          {
+            "title": "fix: Accessing dashboard without login",
+            "url": "https://github.com/piyushgarg-dev/review-app/pull/218",
+            "number": 218,
+            "comments_count": 1,
+            "created_at": "2023-10-21T09:37:36.000Z"
+          },
+          {
+            "title": "fix: Redirect to signIn page when accessing routes without signi…",
+            "url": "https://github.com/piyushgarg-dev/review-app/pull/173",
+            "number": 173,
+            "comments_count": 2,
+            "created_at": "2023-10-15T13:04:21.000Z"
+          },
+          {
+            "title": "feat: adding Home landing page",
+            "url": "https://github.com/piyushgarg-dev/review-app/pull/172",
+            "number": 172,
+            "comments_count": 2,
+            "created_at": "2023-10-15T11:53:54.000Z"
+          },
+          {
+            "title": "🔥 Modern Landing Pages ",
+            "url": "https://github.com/piyushgarg-dev/review-app/issues/169",
+            "number": 169,
+            "comments_count": 10,
+            "created_at": "2023-10-15T06:10:19.000Z"
+          },
+          {
+            "title": "[Bug]: Can access dashboard, even when not logged in",
+            "url": "https://github.com/piyushgarg-dev/review-app/issues/102",
+            "number": 102,
+            "comments_count": 4,
+            "created_at": "2023-10-09T07:08:41.000Z"
+          },
+          {
+            "title": "feat: landing page",
+            "url": "https://github.com/piyushgarg-dev/review-app/pull/97",
+            "number": 97,
+            "comments_count": 2,
+            "created_at": "2023-10-08T18:52:38.000Z"
+          },
+          {
+            "title": "Create About Page",
+            "url": "https://github.com/piyushgarg-dev/review-app/issues/11",
+            "number": 11,
+            "comments_count": 15,
+            "created_at": "2023-10-07T12:57:01.000Z"
+          },
+          {
+            "title": "Landing Pages for Review App",
+            "url": "https://github.com/piyushgarg-dev/review-app/issues/4",
+            "number": 4,
+            "comments_count": 10,
+            "created_at": "2023-10-07T07:47:05.000Z"
+          }
+        ]
+      },
+      {
+        "name": "react-native-healthkit",
+        "owner": "kingstinct",
+        "description": "HealthKit bindings for React Native with TypeScript",
+        "language": "TypeScript",
+        "url": "https://github.com/kingstinct/react-native-healthkit",
+        "stars": 187,
+        "last_modified": "2024-06-17T17:30:15.000Z",
+        "id": "275260119",
+        "issues": [
+          {
+            "title": "Deleting workouts",
+            "url": "https://github.com/kingstinct/react-native-healthkit/issues/44",
+            "number": 44,
+            "comments_count": 0,
+            "created_at": "2022-12-21T14:34:22.000Z"
+          },
+          {
+            "title": "Incorrect metadata key name for deduplicating records",
+            "url": "https://github.com/kingstinct/react-native-healthkit/issues/38",
+            "number": 38,
+            "comments_count": 3,
+            "created_at": "2022-11-07T18:27:13.000Z"
+          },
+          {
+            "title": "Health data generation",
+            "url": "https://github.com/kingstinct/react-native-healthkit/issues/8",
+            "number": 8,
+            "comments_count": 1,
+            "created_at": "2021-03-27T19:56:17.000Z"
+          }
+        ]
+      },
+      {
+        "name": "typed-screeps",
+        "owner": "screepers",
+        "description": "Strong TypeScript declarations for the game Screeps.",
+        "language": "TypeScript",
+        "url": "https://github.com/screepers/typed-screeps",
+        "stars": 184,
+        "last_modified": "2024-03-31T15:14:17.000Z",
+        "id": "92635159",
+        "issues": [
+          {
+            "title": "getDirectionTo can return undefined but typings only have DirectionConstant as a return value.",
+            "url": "https://github.com/screepers/typed-screeps/issues/254",
+            "number": 254,
+            "comments_count": 0,
+            "created_at": "2024-01-11T13:15:03.000Z"
+          },
+          {
+            "title": "Add a new subset of `AnyOwnedStructures`, excluding `KeeperLairs`, etc.",
+            "url": "https://github.com/screepers/typed-screeps/issues/229",
+            "number": 229,
+            "comments_count": 0,
+            "created_at": "2023-02-20T06:30:47.000Z"
+          },
+          {
+            "title": "Missing undefined return type for CostMatrix#get",
+            "url": "https://github.com/screepers/typed-screeps/issues/216",
+            "number": 216,
+            "comments_count": 0,
+            "created_at": "2022-09-11T10:25:08.000Z"
+          }
+        ]
+      },
+      {
+        "name": "jupyter-scheduler",
+        "owner": "jupyter-server",
+        "description": "Run Jupyter notebooks as jobs",
+        "language": "TypeScript",
+        "url": "https://github.com/jupyter-server/jupyter-scheduler",
+        "stars": 183,
+        "last_modified": "2024-06-22T01:56:51.000Z",
+        "id": "534343490",
+        "issues": [
+          {
+            "title": "Clarify input file immutability in the docs, explain what happens with a notebook during job or job definition lifecycle",
+            "url": "https://github.com/jupyter-server/jupyter-scheduler/issues/505",
+            "number": 505,
+            "comments_count": 0,
+            "created_at": "2024-04-09T01:30:31.000Z"
+          },
+          {
+            "title": "Add a link to Jupyter Server config documentation to Scheduler’s \"Server configuration\" docs section",
+            "url": "https://github.com/jupyter-server/jupyter-scheduler/issues/499",
+            "number": 499,
+            "comments_count": 0,
+            "created_at": "2024-03-13T22:32:30.000Z"
+          },
+          {
+            "title": "install eslint-plugin-react",
+            "url": "https://github.com/jupyter-server/jupyter-scheduler/issues/240",
+            "number": 240,
+            "comments_count": 0,
+            "created_at": "2022-10-31T23:20:49.000Z"
+          }
+        ]
+      }
+    ],
+    "C++": [
+      {
+        "name": "upf-bpf",
+        "owner": "navarrothiago",
+        "description": "An In-Kernel Solution Based on BPF/XDP for 5G UPF",
+        "language": "C++",
+        "url": "https://github.com/navarrothiago/upf-bpf",
+        "stars": 192,
+        "last_modified": "2024-03-01T22:48:04.000Z",
+        "id": "274778444",
+        "issues": [
+          {
+            "title": "Create a docker image for HTTP server",
+            "url": "https://github.com/navarrothiago/upf-bpf/issues/62",
+            "number": 62,
+            "comments_count": 0,
+            "created_at": "2021-10-06T00:10:24.000Z"
+          },
+          {
+            "title": "bpftoot not found following the first steps",
+            "url": "https://github.com/navarrothiago/upf-bpf/issues/61",
+            "number": 61,
+            "comments_count": 0,
+            "created_at": "2021-10-04T10:11:16.000Z"
+          },
+          {
+            "title": "Create a build for CI",
+            "url": "https://github.com/navarrothiago/upf-bpf/issues/40",
+            "number": 40,
+            "comments_count": 0,
+            "created_at": "2021-05-30T14:49:49.000Z"
+          }
+        ]
+      },
+      {
+        "name": "DikuMUD3",
+        "owner": "Seifert69",
+        "description": "DikuMUD III using HTML and websockets. ",
+        "language": "C++",
+        "url": "https://github.com/Seifert69/DikuMUD3",
+        "stars": 189,
+        "last_modified": "2024-06-09T09:02:41.000Z",
+        "id": "266027003",
+        "issues": [
+          {
+            "title": "Web Client - client-side CSS?",
+            "url": "https://github.com/Seifert69/DikuMUD3/issues/54",
+            "number": 54,
+            "comments_count": 5,
+            "created_at": "2020-09-21T18:34:49.000Z"
+          },
+          {
+            "title": "Web Client - Tab Complete?",
+            "url": "https://github.com/Seifert69/DikuMUD3/issues/53",
+            "number": 53,
+            "comments_count": 1,
+            "created_at": "2020-09-21T18:32:58.000Z"
+          },
+          {
+            "title": "Admin - Move some login help files to Help/ ",
+            "url": "https://github.com/Seifert69/DikuMUD3/issues/51",
+            "number": 51,
+            "comments_count": 0,
+            "created_at": "2020-09-20T18:46:37.000Z"
+          },
+          {
+            "title": "Web client - Run command N times",
+            "url": "https://github.com/Seifert69/DikuMUD3/issues/39",
+            "number": 39,
+            "comments_count": 2,
+            "created_at": "2020-09-19T06:26:37.000Z"
+          },
+          {
+            "title": "DIL - Identify",
+            "url": "https://github.com/Seifert69/DikuMUD3/issues/38",
+            "number": 38,
+            "comments_count": 5,
+            "created_at": "2020-09-19T06:25:34.000Z"
+          }
+        ]
+      },
+      {
+        "name": "incubator-graphar",
+        "owner": "apache",
+        "description": "An open source, standard data file format for graph data storage and retrieval.",
+        "language": "C++",
+        "url": "https://github.com/apache/incubator-graphar",
+        "stars": 189,
+        "last_modified": "2024-06-24T03:03:12.000Z",
+        "id": "540480040",
+        "issues": [
+          {
+            "title": "[Feat][Spark] support of Spark 3.4.x",
+            "url": "https://github.com/apache/incubator-graphar/issues/381",
+            "number": 381,
+            "comments_count": 6,
+            "created_at": "2024-02-27T09:24:27.000Z"
+          },
+          {
+            "title": "feat: Support `JSON` payload file format for GraphAr",
+            "url": "https://github.com/apache/incubator-graphar/issues/170",
+            "number": 170,
+            "comments_count": 10,
+            "created_at": "2023-05-24T09:39:38.000Z"
+          },
+          {
+            "title": "[Doc] [Improvement] Provide tutorials on using GraphAr libraries in documentation",
+            "url": "https://github.com/apache/incubator-graphar/issues/168",
+            "number": 168,
+            "comments_count": 1,
+            "created_at": "2023-05-24T03:06:04.000Z"
+          },
+          {
+            "title": "[C++] [Improvement] Support to write std::vector in VerticesBuilder/EdgeBuilder of the C++ library",
+            "url": "https://github.com/apache/incubator-graphar/issues/167",
+            "number": 167,
+            "comments_count": 0,
+            "created_at": "2023-05-24T02:51:54.000Z"
+          },
+          {
+            "title": "[Feat][C++] Add a `WriterOption` to allow user to  configure writer option like compression ",
+            "url": "https://github.com/apache/incubator-graphar/issues/108",
+            "number": 108,
+            "comments_count": 1,
+            "created_at": "2023-02-27T03:44:10.000Z"
+          },
+          {
+            "title": "[Feat][Doc] Generate GAR files of whole `ldbc-sample` property graph as an example to demonstrate GAR format",
+            "url": "https://github.com/apache/incubator-graphar/issues/66",
+            "number": 66,
+            "comments_count": 0,
+            "created_at": "2023-01-09T01:46:57.000Z"
+          }
+        ]
+      }
+    ]
+  }
+}
