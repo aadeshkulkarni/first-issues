@@ -1,6 +1,4 @@
-import { readRepoDetails, readRepos } from "@/utils/helper";
-import { populate } from "@/app/api/_scripts/populate";
-import dayjs from "dayjs";
+import { readRepoDetails } from "@/utils/helper";
 
 export const GET = async () => {
   try {
@@ -18,3 +16,5 @@ export const GET = async () => {
     });
   }
 };
+
+export const dynamic = 'force-dynamic'

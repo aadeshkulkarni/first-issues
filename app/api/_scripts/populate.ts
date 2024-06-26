@@ -97,10 +97,7 @@ export const populate = async (repos: string[]): Promise<Repo[]> => {
     .map((res) => res.value)
     .filter(Boolean);
 
-  writeToRepoDetails({
-    last_modified: new Date().toISOString(),
-    details: groupBy(responses, "language"),
-  });
+  writeToRepoDetails(groupBy(responses, "language"));
 
   return responses;
 };
