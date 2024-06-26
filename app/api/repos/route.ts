@@ -7,6 +7,7 @@ const getRepoMetadata = async (repos: string[]) => {
     const repoDetailsFile = await readRepoDetails();
 
     if (
+      repoDetailsFile &&
       dayjs().diff(dayjs(repoDetailsFile.last_modified), "hours") <
       Number(process.env.REPO_CACHE_TIME)
     ) {
@@ -37,8 +38,9 @@ export const GET = async (req: Request) => {
     // total records, current page, records per page
 
     return new Response(JSON.stringify(filteredByLang), { status: 200 });
-  } catch (error) {
-    return new Response("Failed to fetch prompts created by user", {
+  } catch (error: any) {
+    console.log(error);
+    return new Response(` Failed to fetch prompts created by user ${error.message}`, {
       status: 500,
     });
   }

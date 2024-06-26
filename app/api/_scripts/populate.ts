@@ -6,13 +6,7 @@ const populateRepoDetails = async (owner: string, repo_name: string) => {
     console.log(`[${owner}/${repo_name}]: Getting info...`);
 
     const metadataPromise = fetch(
-      `https://api.github.com/repos/${owner}/${repo_name}`,
-      {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-          "User-Agent": "request",
-        },
-      }
+      `https://api.github.com/repos/${owner}/${repo_name}`
     );
     const issuesPromise = fetch(
       `https://api.github.com/repos/${owner}/${repo_name}/issues?labels=${encodeURIComponent(

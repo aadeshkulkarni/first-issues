@@ -5,6 +5,9 @@ import dayjs from "dayjs";
 export const GET = async () => {
   try {
     const repoDetails = await readRepoDetails();
+
+    if(!repoDetails) return new Response("No repo details found", { status: 404 });
+    
     const countObj: Record<string, number> = {};
 
     Object.keys(repoDetails.details).forEach((lang) => {
