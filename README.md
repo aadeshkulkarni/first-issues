@@ -1,9 +1,7 @@
-<p align="center">
-  <a href="#" target="_blank">
-    <img src="" alt="image goes here">
-  </a>
-</p>
-<hr>
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
 Welcome! 👋🏼
 
@@ -13,7 +11,7 @@ Open-source maintainers are always looking to get more people involved, but new 
 
 ## Adding a new project
 
-You're welcome to add a new project in Good First Issue, and we encourage all projects &mdash; old and new, big and small.
+You're welcome to add a new project in FirstIssues.dev, and we encourage all projects &mdash; old and new, big and small.
 
 Follow these simple steps:
 
@@ -33,7 +31,7 @@ Follow these simple steps:
 
 ## Setting up the project locally
 
-Good First Issue is built using NextJs.
+FirstIssues is built using NextJs.
 
 To contribute new features and changes to the website, you would want to run the app locally. Please follow these steps:
 
@@ -49,3 +47,17 @@ $ npm run dev # start the development server
 ```
 
 The app should spin up on your browser.
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/aadeshkulkarni/first-issues.svg?style=for-the-badge
+[contributors-url]: https://github.com/aadeshkulkarni/first-issues/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/aadeshkulkarni/first-issues.svg?style=for-the-badge
+[forks-url]: https://github.com/aadeshkulkarni/first-issues/network/members
+[stars-shield]: https://img.shields.io/github/stars/aadeshkulkarni/first-issues.svg?style=for-the-badge
+[stars-url]: https://github.com/aadeshkulkarni/first-issues/stargazers
+[issues-shield]: https://img.shields.io/github/issues/aadeshkulkarni/first-issues.svg?style=for-the-badge
+[issues-url]: https://github.com/aadeshkulkarni/first-issues/issues
+
+
+
