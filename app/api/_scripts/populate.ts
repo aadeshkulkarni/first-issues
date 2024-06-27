@@ -1,5 +1,16 @@
 import { Repo } from "@/schema/repo";
+import { IIssue } from "@/types/populate";
 import { groupBy, writeToRepoDetails } from "@/utils/helper";
+
+const mapIssue = (issue: IIssue) => {
+  return {
+    title: issue.title,
+    url: issue.html_url,
+    number: issue.number,
+    comments_count: issue.comments,
+    created_at: new Date(issue.created_at).toISOString(),
+  };
+};
 
 const populateRepoDetails = async (owner: string, repo_name: string) => {
   try {
@@ -56,24 +67,19 @@ const populateRepoDetails = async (owner: string, repo_name: string) => {
       return null;
     }
 
+    const { description, language, html_url, stargazers_count, pushed_at, id } =
+      metadata;
+
     const payload: Repo = {
       name: repo_name,
       owner,
-      description: metadata.description,
-      language: metadata.language,
-      url: metadata.html_url,
-      stars: metadata.stargazers_count,
-      last_modified: new Date(metadata.pushed_at).toISOString(),
-      id: String(metadata.id),
-      issues:
-        // TODO: Find a way to add types here
-        issues?.map((issue: any) => ({
-          title: issue.title,
-          url: issue.html_url,
-          number: issue.number,
-          comments_count: issue.comments,
-          created_at: new Date(issue.created_at).toISOString(),
-        })) ?? [],
+      description,
+      language,
+      url: html_url,
+      stars: stargazers_count,
+      last_modified: new Date(pushed_at).toISOString(),
+      id: `${id}`,
+      issues: issues?.map(mapIssue) ?? [],
     };
 
     return payload;
