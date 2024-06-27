@@ -1,8 +1,7 @@
-import { Repo } from "@/schema/repo";
-import { IIssue } from "@/types/populate";
+import { Repo, Issue } from "@/schema";
 import { groupBy, writeToRepoDetails } from "@/utils/helper";
 
-const mapIssue = (issue: IIssue) => {
+const mapIssue = (issue: Issue) => {
   return {
     title: issue.title,
     url: issue.html_url,
