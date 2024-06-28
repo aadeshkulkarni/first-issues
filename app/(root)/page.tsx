@@ -27,7 +27,7 @@ const Home = () => {
             <Plus className="w-5 h-5 mr-2" /> Add your project
           </Button>
         </div>
-        <div className="col-span-12 md:col-span-8 md:h-[90vh]">
+        <div className="col-span-12 md:col-span-8 md:h-[90vh] overflow-y-auto no-scrollbar">
           <List langFilter={langFilter} />
         </div>
       </div>
@@ -37,4 +37,4 @@ const Home = () => {
 
 export default Home;
 
-const Loader = () => {};
+const Loader = () => { };
