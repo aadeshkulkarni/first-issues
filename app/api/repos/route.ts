@@ -1,12 +1,5 @@
 import { repoStore } from "@/store/repo-store";
 
-const getRepoMetadata = async (repos: string[]) => {
-  try {
-  } catch (e) {
-    console.error(e);
-  }
-};
-
 export const GET = async (req: Request) => {
   try {
     const url = new URL(req.url || "");
@@ -15,7 +8,7 @@ export const GET = async (req: Request) => {
     const repoDetailsFile = repoStore.read();
     const repoMetadata = Object.values(repoDetailsFile.details).flat();
 
-    console.log("repoDetailsFile", repoDetailsFile);
+    console.log("repoDetailsFile", repoDetailsFile.last_modified);
     const filteredByLang = lang
       ? repoMetadata?.filter((repo) => repo.language.toLowerCase() === lang)
       : repoMetadata;
@@ -30,3 +23,5 @@ export const GET = async (req: Request) => {
     });
   }
 };
+
+export const dynamic = "force-dynamic";
