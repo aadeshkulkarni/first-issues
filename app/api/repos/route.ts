@@ -1,22 +1,7 @@
-import { readRepoDetails, readRepos } from "@/utils/helper";
-import { populate } from "@/app/api/_scripts/populate";
-import dayjs from "dayjs";
+import { repoStore } from "@/store/repo-store";
 
 const getRepoMetadata = async (repos: string[]) => {
   try {
-    const repoDetailsFile = await readRepoDetails();
-
-    if (
-      repoDetailsFile.last_modified &&
-      dayjs().diff(dayjs(repoDetailsFile.last_modified), "hours") <
-      Number(process.env.REPO_CACHE_TIME)
-    ) {
-      console.log("Returning from cache...");
-      return Object.values(repoDetailsFile.details).flat();
-    } else {
-      const response = await populate(repos);
-      return response;
-    }
   } catch (e) {
     console.error(e);
   }
@@ -27,9 +12,10 @@ export const GET = async (req: Request) => {
     const url = new URL(req.url || "");
     const lang = url.searchParams.get("lang")?.toLowerCase() || "";
 
-    const repos = await readRepos();
-    const repoMetadata = await getRepoMetadata(repos);
+    const repoDetailsFile = repoStore.read();
+    const repoMetadata = Object.values(repoDetailsFile.details).flat();
 
+    console.log("repoDetailsFile", repoDetailsFile);
     const filteredByLang = lang
       ? repoMetadata?.filter((repo) => repo.language.toLowerCase() === lang)
       : repoMetadata;

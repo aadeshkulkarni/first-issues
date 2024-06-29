@@ -1,5 +1,5 @@
 import { Repo } from "@/schema/repo";
-import { groupBy, writeToRepoDetails } from "@/utils/helper";
+import { repoStore } from "@/store/repo-store";
 
 const populateRepoDetails = async (owner: string, repo_name: string) => {
   try {
@@ -53,7 +53,7 @@ const populateRepoDetails = async (owner: string, repo_name: string) => {
       console.log(
         `[${owner}/${repo_name}]: Does not have enough good first issues.`
       );
-      return null;
+      return;
     }
 
     const payload: Repo = {
@@ -76,28 +76,19 @@ const populateRepoDetails = async (owner: string, repo_name: string) => {
         })) ?? [],
     };
 
-    return payload;
+    repoStore.addToLanguage(payload.language, payload);
   } catch (e: any) {
     console.log(`[${owner}/${repo_name}]: ${e.message}`);
-    return null;
+    return;
   }
 };
 
-export const populate = async (repos: string[]): Promise<Repo[]> => {
-  const promises = repos.map((repo) => {
+export const populate = async (repos: string[]) => {
+  for (const repo of repos) {
     const [owner, repo_name] = repo.split("/");
-    return populateRepoDetails(owner, repo_name);
-  });
+    await populateRepoDetails(owner, repo_name);
+  }
 
-  const responsesJSON = await Promise.allSettled(promises);
-  const responses = responsesJSON
-    .filter(
-      (res): res is PromiseFulfilledResult<Repo> => res.status === "fulfilled"
-    )
-    .map((res) => res.value)
-    .filter(Boolean);
-
-  writeToRepoDetails(groupBy(responses, "language"));
-
-  return responses;
+  // update cache last modified time
+  repoStore.updateLastModified();
 };

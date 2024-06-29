@@ -1,8 +1,8 @@
-import { readRepoDetails } from "@/utils/helper";
+import { repoStore } from "@/store/repo-store";
 
 export const GET = async () => {
   try {
-    const repoDetails = await readRepoDetails();
+    const repoDetails = repoStore.read();
     const countObj: Record<string, number> = {};
 
     Object.keys(repoDetails.details).forEach((lang) => {
@@ -17,4 +17,4 @@ export const GET = async () => {
   }
 };
 
-export const dynamic = 'force-dynamic'
+export const dynamic = "force-dynamic";
