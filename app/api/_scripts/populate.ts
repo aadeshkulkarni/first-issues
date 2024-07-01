@@ -4,7 +4,7 @@ import { groupBy, writeToRepoDetails } from "@/utils/helper";
 const mapIssue = (issue: Issue) => {
   return {
     title: issue.title,
-    url: issue.html_url,
+    html_url: issue.html_url,
     number: issue.number,
     comments_count: issue.comments,
     created_at: new Date(issue.created_at).toISOString(),
@@ -74,7 +74,7 @@ const populateRepoDetails = async (owner: string, repo_name: string) => {
       owner,
       description,
       language,
-      url: html_url,
+      html_url: html_url,
       stars: stargazers_count,
       last_modified: new Date(pushed_at).toISOString(),
       id: `${id}`,
