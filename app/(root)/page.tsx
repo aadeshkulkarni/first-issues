@@ -36,7 +36,7 @@ const Home = () => {
             Send Feedback
           </Button>
         </div>
-        <div className="col-span-12 md:col-span-8 md:h-[90vh]">
+        <div className="col-span-12 md:col-span-8 md:h-[90vh] overflow-y-auto no-scrollbar">
           <List langFilter={langFilter} />
         </div>
       </div>

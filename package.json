@@ -21,6 +21,7 @@
     "mongoose": "^8.4.4",
     "next": "14.2.4",
     "next-themes": "^0.3.0",
+    "nextjs-toploader": "^1.6.12",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.3.0",
