@@ -7,7 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Good first issues!",
+  title: "First issues!",
   description:
     "Helping developers discover and contribute to outstanding open-source repositories.",
   // [TODO]: Add icon here
