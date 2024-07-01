@@ -8,7 +8,7 @@ export const repoSchema = z.object({
   description: z.string(),
   language: z.string(),
   last_modified: z.string().datetime(),
-  url: z.string().url(),
+  html_url: z.string().url(),
   stars: z.number(),
   issues: z.array(issueSchema),
 });

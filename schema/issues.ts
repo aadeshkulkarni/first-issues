@@ -6,6 +6,8 @@ export const issueSchema = z.object({
   number: z.number(),
   comments_count: z.number(),
   created_at: z.string().datetime(),
+  html_url: z.string().url(),
+  comments: z.number(),
 });
 
 export type Issue = z.infer<typeof issueSchema>;

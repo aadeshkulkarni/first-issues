@@ -1,4 +1,4 @@
-import { RepoDetails } from "@/schema/repoDetails";
+import { RepoDetails } from "@/schema";
 
 let instance: RepoStore;
 

@@ -1,11 +1,14 @@
 import { repoStore } from "@/app/api/_store/repo-store";
-import { RepoDetails } from "@/schema/repoDetails";
+import { RepoDetails } from "@/schema";
 import { promises as fs } from "fs";
 import path from "path";
 
 export const readRepos = async (): Promise<string[]> => {
   try {
-    const file = await fs.readFile(path.join(process.cwd(), 'data/repos.json'), "utf8");
+    const file = await fs.readFile(
+      path.join(process.cwd(), "data/repos.json"),
+      "utf8"
+    );
     const data = JSON.parse(file);
 
     return data;
@@ -23,7 +26,7 @@ export const readRepoDetails = async (): Promise<RepoDetails> => {
   }
 };
 
-export const writeToRepoDetails = (content: RepoDetails['details']) => {
+export const writeToRepoDetails = (content: RepoDetails["details"]) => {
   repoStore.write(content);
 };
 

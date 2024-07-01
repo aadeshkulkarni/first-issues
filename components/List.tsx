@@ -9,7 +9,7 @@ import Link from "next/link";
 import { MessagesSquare } from "lucide-react";
 import ListLoader from "@/components/ListLoader";
 import useFetch from "@/hooks/useFetchRepos";
-import { Repo } from "@/schema/repo";
+import { Repo } from "@/schema";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { Badge } from "./ui/badge";
@@ -36,7 +36,7 @@ const List = ({ langFilter }: Props) => {
             <AccordionTrigger>
               <div className="text-left relative w-full">
                 <div className="flex justify-between">
-                  <Link target="_blank" href={repo.url}>
+                  <Link target="_blank" href={repo.html_url}>
                     <h1 className="inline text-lg text-slate-800 dark:text-slate-300 font-semibold hover:underline py-2">
                       <span className="capitalize">{repo.owner}</span> /{" "}
                       <span className="capitalize">{repo.name}</span>
