@@ -2,13 +2,9 @@ const mongoose = require("mongoose");
 
 mongoose.connect(process.env.MONGODB_URI!);
 
-interface IFeedback extends Document {
-  name?: string;
-  feedback: string;
-}
-
 const FeedbackSchema = new mongoose.Schema({
   name: { type: String, required: false },
+  email: { type: String, required: true },
   feedback: { type: String, required: true },
 });
 

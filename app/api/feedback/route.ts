@@ -2,9 +2,9 @@ import mongoose from "mongoose";
 import Feedback from "@/models/Feedback";
 
 export const POST = async (req: Request) => {
-  const { name, feedback } = await req.json();
+  const { name, email, feedback } = await req.json();
 
-  if (!feedback) {
+  if (!feedback && !email) {
     return new Response(JSON.stringify({ message: "Feedback is required" }), {
       status: 400,
     });
@@ -13,7 +13,7 @@ export const POST = async (req: Request) => {
   try {
     await mongoose.connect(process.env.MONGODB_URI!);
 
-    const newFeedback = new Feedback({ name, feedback });
+    const newFeedback = new Feedback({ name, email, feedback });
     await newFeedback.save();
 
     return new Response(

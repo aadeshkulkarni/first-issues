@@ -1,4 +1,3 @@
-import FeedbackForm from "@/components/feedback-form";
 import React from "react";
 
 const About = () => {
@@ -30,7 +29,6 @@ const About = () => {
         environment where developers of all skill levels can join the
         open-source community and start making meaningful contributions.
       </p>
-      <FeedbackForm />
     </div>
   );
 };
