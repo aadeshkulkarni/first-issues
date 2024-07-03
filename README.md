@@ -37,7 +37,7 @@ To contribute new features and changes to the website, you would want to run the
 
 1. Clone the project locally. Make sure you have Python 3 and a recent version of Node.js installed on your computer.
 
-2. Add GITHUB_TOKEN in .env file
+2. Add GITHUB_TOKEN, MONGODB_URI in .env file (refer .env.local for reference)
 
 3. Build the front-end app and start the development server.
 
