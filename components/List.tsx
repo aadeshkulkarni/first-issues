@@ -63,7 +63,7 @@ const List = ({ langFilter }: Props) => {
                   className="grid grid-cols-12 p-1 text-sm text-slate-800 dark:text-slate-400"
                 >
                   <div className="col-span-2">
-                    <Link target="_blank" href={issue.url}>
+                    <Link target="_blank" href={issue.html_url}>
                       <p className="text-slate-600 hover:underline cursor-pointer">
                         #{issue.number}
                       </p>
