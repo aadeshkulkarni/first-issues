@@ -1,7 +1,7 @@
 import React from "react";
 import { Badge } from "./ui/badge";
 import useFetch from "@/hooks/useFetchRepos";
-import { LangStats } from "@/schema/languageStats";
+import { LangStats } from "@/schema";
 import FilterLoader from "./FilterLoader";
 import { cn } from "@/lib/utils";
 
