@@ -1,6 +1,7 @@
 import { readRepoDetails, readRepos } from "@/utils/helper";
 import { populate } from "@/app/api/_scripts/populate";
 import dayjs from "dayjs";
+import { Repo } from "@/schema";
 
 interface RepoType {
   total: Number,
@@ -17,7 +18,7 @@ const getRepoMetadata = async (repos: string[]) => {
     if (
       repoDetailsFile.last_modified &&
       dayjs().diff(dayjs(repoDetailsFile.last_modified), "hours") <
-      Number(process.env.REPO_CACHE_TIME)
+        Number(process.env.REPO_CACHE_TIME)
     ) {
       console.log("Returning from cache...");
       return Object.values(repoDetailsFile.details).flat();
@@ -34,19 +35,38 @@ export const GET = async (req: Request) => {
   try {
     const url = new URL(req.url || "");
     const lang = url.searchParams.get("lang")?.toLowerCase() || "";
+    const sortBy = url.searchParams.get("sort_by")?.toLowerCase() || "";
+    const order = url.searchParams.get("order")?.toLowerCase() || "";
     const page = parseInt(url.searchParams.get("page") || "1");
     const limit = parseInt(url.searchParams.get("limit") || "100"); // TODO: Change 100 to 10 once UI is implemented.
 
     const repos = await readRepos();
     const repoMetadata = await getRepoMetadata(repos);
 
-    const filteredByLang = lang
+    let filteredByLang = lang
       ? repoMetadata?.filter((repo) => repo.language.toLowerCase() === lang)
       : repoMetadata;
 
+    if (sortBy) {
+      filteredByLang = filteredByLang?.sort((x: Repo, y: Repo) => {
+        if (sortBy === "stars") {
+          return order === "desc" ? y.stars - x.stars : x.stars - y.stars;
+        } else if (sortBy === "last_active") {
+          const lhs = new Date(x.last_modified).getTime();
+          const rhs = new Date(y.last_modified).getTime();
+          return order === "desc" ? lhs - rhs : rhs - lhs;
+        } else if (sortBy === "num_of_issues") {
+          return order === "desc"
+            ? y.issues.length - x.issues.length
+            : x.issues.length - y.issues.length;
+        }
+        return 1;
+      });
+    }
+
     const totalRecords = filteredByLang?.length || 0;
     const totalPages = Math.ceil(totalRecords / limit);
-    const paginatedData = filteredByLang?.slice((page - 1) * limit, page * limit); 
+    const paginatedData = filteredByLang?.slice((page - 1) * limit, page * limit);
 
     const response: RepoType = {
       total: totalRecords,

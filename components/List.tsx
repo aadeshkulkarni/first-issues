@@ -13,15 +13,17 @@ import { Repo } from "@/schema";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { Badge } from "./ui/badge";
+import { sortProp } from "@/utils/constants";
 dayjs.extend(relativeTime);
 
 interface Props {
   langFilter: string;
+  sortFilter: sortProp;
 }
 
-const List = ({ langFilter }: Props) => {
+const List = ({ langFilter, sortFilter }: Props) => {
   const { isLoading, data: repos } = useFetch<Repo[]>({
-    url: `/api/repos?lang=${langFilter}`,
+    url: `/api/repos?lang=${langFilter}&sort_by=${sortFilter.value}&order=${sortFilter.order}`,
   });
 
   return (

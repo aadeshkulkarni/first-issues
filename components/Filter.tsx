@@ -4,16 +4,23 @@ import useFetch from "@/hooks/useFetchRepos";
 import { LangStats } from "@/schema";
 import FilterLoader from "./FilterLoader";
 import { cn } from "@/lib/utils";
-
+import { sortOptions, sortProp } from "@/utils/constants";
 interface Props {
   langFilter: string;
+  sortFilter: sortProp | undefined;
+  setSortFilter: React.Dispatch<React.SetStateAction<sortProp>>;
   setLangFilter: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Filter = ({ langFilter, setLangFilter }: Props) => {
+const Filter = ({ langFilter, sortFilter, setSortFilter, setLangFilter }: Props) => {
   const { isLoading, data: langStats = {} } = useFetch<LangStats>({
     url: "/api/lang-stats",
   });
+
+  function handleSortBtnClick(item:sortProp){
+    setSortFilter(item);
+    console.log("/api/")
+  }
 
   return (
     <div className="py-2 md:py-4">
@@ -29,9 +36,7 @@ const Filter = ({ langFilter, setLangFilter }: Props) => {
             .map((item) => (
               <Badge
                 key={item}
-                onClick={() =>
-                  setLangFilter((prev) => (prev === item ? "" : item))
-                }
+                onClick={() => setLangFilter((prev) => (prev === item ? "" : item))}
                 className={cn("!border-1 !border-gray-500 !bg-inherit", {
                   " !border-green-500 ": item === langFilter,
                 })}
@@ -48,6 +53,30 @@ const Filter = ({ langFilter, setLangFilter }: Props) => {
             ))}
         </div>
       )}
+
+      <h2 className="uppercase font-semibold text-md py-4 text-slate-700 dark:text-slate-300">
+        SORT BY
+      </h2>
+      <div className="flex flex-wrap gap-2">
+        {sortOptions.map((item) => (
+          <Badge
+            key={item.value}
+            onClick={() => handleSortBtnClick(item)}
+            className={cn("!border-1 !border-gray-800 dark:!border-gray-500 !bg-inherit", {
+              "!border-emerald-700 dark:!border-emerald-500 ": item.value === sortFilter?.value,
+            })}
+          >
+            <p
+              className={cn({
+                "!text-emerald-700 dark:!text-emerald-500": item.value === sortFilter?.value,
+                "!text-gray-800 dark:!text-gray-200": item.value !== sortFilter?.value,
+              })}
+            >
+              {item.label}
+            </p>
+          </Badge>
+        ))}
+      </div>
     </div>
   );
 };
