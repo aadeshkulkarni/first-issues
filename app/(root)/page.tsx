@@ -21,6 +21,10 @@ const Home = () => {
     router.push("/feedback");
   }
 
+  const navigateToContributors = () => {
+    router.push("/contributors");
+  };
+
   return (
     <main className="flex min-h-screen flex-col justify-between md:overflow-hidden">
       <div className="grid grid-cols-12 gap-4 overflow-y-auto md:overflow-hidden no-scrollbar">
@@ -45,6 +49,9 @@ const Home = () => {
             onClick={navigateToFeedback}
           >
             Send Feedback
+          </Button>
+          <Button variant='link' className="w-full uppercase text-xs" onClick={navigateToContributors}>
+Contributors
           </Button>
         </div>
         <div className="col-span-12 md:col-span-8 md:h-[90vh] overflow-y-auto no-scrollbar">

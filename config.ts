@@ -1,0 +1,1 @@
+export const GITHUB_CONTRIBUTOR_URL = 'https://api.github.com/repositories/814620640/contributors';
