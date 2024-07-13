@@ -8,6 +8,6 @@ const FeedbackSchema = new mongoose.Schema({
   feedback: { type: String, required: true },
 });
 
-const Feedback = mongoose.model("Feedback", FeedbackSchema);
+const Feedback = mongoose.models.Feedback || mongoose.model("Feedback", FeedbackSchema);
 
 export default Feedback;
