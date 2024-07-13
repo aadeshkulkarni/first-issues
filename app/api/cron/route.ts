@@ -5,6 +5,9 @@ import Project from "@/models/Project";
 import mongoose from "mongoose";
 
 export const GET = async (req: Request) => {
+  if (req.headers.get("Authorization") !== `Bearer ${process.env.CRON_SECRET}`) {
+    return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
+  }
   try {
     const repos = await readRepos();
     const fullRepoList = await fetchInfoFromGithub(repos);
