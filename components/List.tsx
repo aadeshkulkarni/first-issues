@@ -33,23 +33,23 @@ const List = ({ langFilter, sortFilter }: Props) => {
         <Accordion key={repo.name} type="single" collapsible className="my-2">
           <AccordionItem
             value="item-1"
-            className="border border-slate-500 dark:border-slate-700 px-4 rounded-md"
+            className="border border-slate-500 dark:border-slate-700 px-4 rounded-sm"
           >
             <AccordionTrigger>
               <div className="text-left relative w-full">
                 <div className="flex justify-between">
                   <Link target="_blank" href={repo.html_url}>
-                    <h1 className="inline text-lg text-slate-800 dark:text-slate-300 font-semibold hover:underline py-2">
+                    <h1 className="inline text-md text-slate-800 dark:text-slate-300 font-semibold hover:underline py-2">
                       <span className="capitalize">{repo.owner}</span> /{" "}
                       <span className="capitalize">{repo.name}</span>
                     </h1>
                   </Link>
                   <Badge variant="outline">{repo.issues.length} issues</Badge>
                 </div>
-                <h6 className="text-md text-slate-800 dark:text-slate-400">
+                <h6 className="text-md text-slate-800 dark:text-slate-400 line-clamp-2">
                   {repo.description}
                 </h6>
-                <div className="flex gap-x-4 py-2 font-light text-slate-800 dark:text-slate-400">
+                <div className="flex text-sm gap-x-4 py-2 font-light text-slate-800 dark:text-slate-400">
                   <div>Stars: {repo.stars}</div>
                   <div>Lang: {repo.language}</div>
                   <div>

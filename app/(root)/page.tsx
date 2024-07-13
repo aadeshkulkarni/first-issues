@@ -51,7 +51,7 @@ const Home = () => {
             Send Feedback
           </Button>
           <Button variant='link' className="w-full uppercase text-xs" onClick={navigateToContributors}>
-Contributors
+            Contributors
           </Button>
         </div>
         <div className="col-span-12 md:col-span-8 md:h-[90vh] overflow-y-auto no-scrollbar">
