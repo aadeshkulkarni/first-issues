@@ -27,3 +27,17 @@ export const POST = async (req: Request) => {
     });
   }
 };
+export const GET = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI!);
+
+    const feedbacks = await Feedback.find();
+
+    return new Response(JSON.stringify(feedbacks), { status: 200 });
+  } catch (error) {
+    console.log(error);
+    return new Response(JSON.stringify({ message: "Internal server error" }), {
+      status: 500,
+    });
+  }
+};
