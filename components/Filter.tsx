@@ -18,7 +18,7 @@ const Filter = ({ langFilter, sortFilter, setSortFilter, setLangFilter }: Props)
   });
 
   function handleSortBtnClick(item:sortProp){
-    setSortFilter(item);
+    setSortFilter((prev) => (prev?.value === item.value ? { label: "", value: "", order: "" } : item ));
     console.log("/api/")
   }
 
