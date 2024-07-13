@@ -8,7 +8,7 @@ export const sortOptions: sortProp[] = [
   {
     label: "Last Active",
     value: "last_active",
-    order: "asc",
+    order: "desc",
   },
   {
     label: "Stars",

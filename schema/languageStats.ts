@@ -1,5 +1,8 @@
 import { z } from "zod";
 
-export const langStatsSchema = z.record(z.string(), z.number());
+export const langStatsSchema = z.object({
+    language: z.string(),
+    count: z.number()
+});
 
 export type LangStats = z.infer<typeof langStatsSchema>;

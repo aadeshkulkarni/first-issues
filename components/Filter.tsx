@@ -13,8 +13,8 @@ interface Props {
 }
 
 const Filter = ({ langFilter, sortFilter, setSortFilter, setLangFilter }: Props) => {
-  const { isLoading, data: langStats = {} } = useFetch<LangStats>({
-    url: "/api/lang-stats",
+  const { isLoading, data: langStats = [] } = useFetch<LangStats[]>({
+    url: "/api/language",
   });
 
   function handleSortBtnClick(item:sortProp){
@@ -31,23 +31,21 @@ const Filter = ({ langFilter, sortFilter, setSortFilter, setLangFilter }: Props)
         <FilterLoader isLoading={isLoading} />
       ) : (
         <div className="flex flex-wrap gap-2">
-          {Object.keys(langStats)
-            .filter(Boolean)
-            .map((item) => (
+          {langStats.map((item:LangStats) => (
               <Badge
-                key={item}
-                onClick={() => setLangFilter((prev) => (prev === item ? "" : item))}
-                className={cn("!border-1 !border-gray-500 !bg-inherit", {
-                  " !border-green-500 ": item === langFilter,
+                key={item.language}
+                onClick={() => setLangFilter((prev) => (prev === item.language ? "" : item.language))}
+                className={cn("!border-1 !border-gray-800 dark:!border-gray-500 !bg-inherit", {
+                  " !border-emerald-700 dark:!border-emerald-500": item.language === langFilter,
                 })}
               >
                 <p
                   className={cn({
-                    "!text-green-500": item === langFilter,
-                    "!text-gray-500": item !== langFilter,
+                    "!text-emerald-700 dark:!text-emerald-500": item.language === langFilter,
+                    "!text-gray-800 dark:!text-gray-200": item.language !== langFilter,
                   })}
                 >
-                  {item} x {langStats[item]}
+                  {item.language} x {item.count}
                 </p>
               </Badge>
             ))}
@@ -63,7 +61,7 @@ const Filter = ({ langFilter, sortFilter, setSortFilter, setLangFilter }: Props)
             key={item.value}
             onClick={() => handleSortBtnClick(item)}
             className={cn("!border-1 !border-gray-800 dark:!border-gray-500 !bg-inherit", {
-              "!border-emerald-700 dark:!border-emerald-500 ": item.value === sortFilter?.value,
+              "!border-emerald-700 dark:!border-emerald-500": item.value === sortFilter?.value,
             })}
           >
             <p

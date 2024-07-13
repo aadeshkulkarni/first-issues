@@ -23,7 +23,7 @@ interface Props {
 
 const List = ({ langFilter, sortFilter }: Props) => {
   const { isLoading, data: repos } = useFetch<Repo[]>({
-    url: `/api/repos?lang=${langFilter}&sort_by=${sortFilter.value}&order=${sortFilter.order}`,
+    url: `/api/project?lang=${langFilter}&sort_by=${sortFilter.value}&order=${sortFilter.order}`,
   });
 
   return (

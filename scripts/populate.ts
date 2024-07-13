@@ -1,5 +1,4 @@
 import { Repo, Issue } from "@/schema";
-import { groupBy, writeToRepoDetails } from "@/utils/helper";
 
 const mapIssue = (issue: Issue) => {
   return {
@@ -88,7 +87,7 @@ const populateRepoDetails = async (owner: string, repo_name: string) => {
   }
 };
 
-export const populate = async (repos: string[]): Promise<Repo[]> => {
+export const fetchInfoFromGithub = async (repos: string[]): Promise<Repo[]> => {
   const promises = repos.map((repo) => {
     const [owner, repo_name] = repo.split("/");
     return populateRepoDetails(owner, repo_name);
@@ -101,8 +100,9 @@ export const populate = async (repos: string[]): Promise<Repo[]> => {
     )
     .map((res) => res.value)
     .filter(Boolean);
-
-  writeToRepoDetails(groupBy(responses, "language"));
-
+  
+  /* Disabling writing to json as data is now injected into MongoDB directly 
+   * writeToRepoDetails(groupBy(responses, "language"));
+   */
   return responses;
 };

@@ -1,7 +1,9 @@
-import { repoStore } from "@/app/api/_store/repo-store";
+import { repoStore } from "@/store/repo-store";
 import { RepoDetails } from "@/schema";
+import { fetchInfoFromGithub } from "@/scripts/populate";
 import { promises as fs } from "fs";
 import path from "path";
+import dayjs from "dayjs";
 
 export const readRepos = async (): Promise<string[]> => {
   try {
@@ -28,6 +30,26 @@ export const readRepoDetails = async (): Promise<RepoDetails> => {
 
 export const writeToRepoDetails = (content: RepoDetails["details"]) => {
   repoStore.write(content);
+};
+
+export const getRepoMetadata = async (repos: string[]) => {
+  try {
+    const repoDetailsFile = await readRepoDetails();
+
+    if (
+      repoDetailsFile.last_modified &&
+      dayjs().diff(dayjs(repoDetailsFile.last_modified), "hours") <
+        Number(process.env.REPO_CACHE_TIME)
+    ) {
+      console.log("Returning from cache...");
+      return Object.values(repoDetailsFile.details).flat();
+    } else {
+      const response = await fetchInfoFromGithub(repos);
+      return response;
+    }
+  } catch (e) {
+    console.error(e);
+  }
 };
 
 export const groupBy = (data: any[], key: string) => {
