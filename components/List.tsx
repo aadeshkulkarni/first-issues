@@ -22,6 +22,9 @@ interface Props {
 }
 
 const List = ({ langFilter, sortFilter }: Props) => {
+
+  langFilter = encodeURIComponent(langFilter);
+
   const { isLoading, data: repos } = useFetch<Repo[]>({
     url: `/api/project?lang=${langFilter}&sort_by=${sortFilter.value}&order=${sortFilter.order}`,
   });
