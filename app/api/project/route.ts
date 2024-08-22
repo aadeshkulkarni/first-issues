@@ -1,5 +1,5 @@
 import Project from '@/models/Project';
-import mongoose from 'mongoose';
+
 import { NextRequest, NextResponse } from 'next/server';
 
 export const GET = async (req: NextRequest) => {
@@ -26,8 +26,7 @@ export const GET = async (req: NextRequest) => {
         sort.issues = order;
       }
     }
-    console.log("Mongoose query: ",query);
-    await mongoose.connect(process.env.MONGODB_URI!);
+    
     const totalRecords = await Project.countDocuments(query);
     const totalPages = Math.ceil(totalRecords / limit);
 

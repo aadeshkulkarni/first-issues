@@ -11,7 +11,7 @@ export const GET = async (req: Request) => {
   try {
     const repos = await readRepos();
     const fullRepoList = await fetchInfoFromGithub(repos);
-    await mongoose.connect(process.env.MONGODB_URI!);
+    // await mongoose.connect(process.env.MONGODB_URI!);
 
     await Project.deleteMany({});
     await Project.insertMany(fullRepoList);

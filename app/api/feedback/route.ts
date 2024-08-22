@@ -11,7 +11,7 @@ export const POST = async (req: Request) => {
   }
 
   try {
-    await mongoose.connect(process.env.MONGODB_URI!);
+    // await mongoose.connect(process.env.MONGODB_URI!);
 
     const newFeedback = new Feedback({ name, email, feedback });
     await newFeedback.save();
@@ -29,7 +29,7 @@ export const POST = async (req: Request) => {
 };
 export const GET = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI!);
+    // await mongoose.connect(process.env.MONGODB_URI!);
 
     const feedbacks = await Feedback.find();
 

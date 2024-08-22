@@ -1,5 +1,4 @@
 import Project from "@/models/Project";
-import mongoose from "mongoose";
 import { NextRequest, NextResponse } from "next/server";
 
 export const GET = async (req: NextRequest) => {
@@ -19,7 +18,8 @@ export const GET = async (req: NextRequest) => {
         },
       },
     ];
-    await mongoose.connect(process.env.MONGODB_URI!);
+    
+    
     const result = await Project.aggregate(aggregationPipeline).exec();
     return NextResponse.json({ data: result });
   } catch (error) {
