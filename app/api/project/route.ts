@@ -1,3 +1,4 @@
+import { connectDb } from '@/config/db';
 import Project from '@/models/Project';
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -27,6 +28,8 @@ export const GET = async (req: NextRequest) => {
       }
     }
     
+    await connectDb();
+
     const totalRecords = await Project.countDocuments(query);
     const totalPages = Math.ceil(totalRecords / limit);
 

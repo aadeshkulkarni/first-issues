@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
 import Feedback from "@/models/Feedback";
+import { connectDb } from "@/config/db";
 
 export const POST = async (req: Request) => {
   const { name, email, feedback } = await req.json();
@@ -29,7 +29,7 @@ export const POST = async (req: Request) => {
 };
 export const GET = async () => {
   try {
-    // await mongoose.connect(process.env.MONGODB_URI!);
+    await connectDb();
 
     const feedbacks = await Feedback.find();
 

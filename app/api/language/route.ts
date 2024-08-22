@@ -1,3 +1,4 @@
+import { connectDb } from "@/config/db";
 import Project from "@/models/Project";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -19,7 +20,7 @@ export const GET = async (req: NextRequest) => {
       },
     ];
     
-    
+    await connectDb();
     const result = await Project.aggregate(aggregationPipeline).exec();
     return NextResponse.json({ data: result });
   } catch (error) {

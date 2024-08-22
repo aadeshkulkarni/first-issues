@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { readRepos } from "@/utils/helper";
 import { fetchInfoFromGithub } from "@/scripts/populate";
 import Project from "@/models/Project";
-import mongoose from "mongoose";
+import { connectDb } from "@/config/db";
 
 export const GET = async (req: Request) => {
   if (req.headers.get("Authorization") !== `Bearer ${process.env.CRON_SECRET}`) {
@@ -11,7 +11,7 @@ export const GET = async (req: Request) => {
   try {
     const repos = await readRepos();
     const fullRepoList = await fetchInfoFromGithub(repos);
-    // await mongoose.connect(process.env.MONGODB_URI!);
+    await connectDb();
 
     await Project.deleteMany({});
     await Project.insertMany(fullRepoList);
