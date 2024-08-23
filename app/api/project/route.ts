@@ -1,6 +1,7 @@
 import Project from '@/models/Project';
 import mongoose from 'mongoose';
 import { NextRequest, NextResponse } from 'next/server';
+import { Repo } from '@/schema';
 
 export const GET = async (req: NextRequest) => {
   try {
@@ -12,7 +13,10 @@ export const GET = async (req: NextRequest) => {
     const limit = parseInt(url.searchParams.get("limit") || "100");
 
     const query: any = {};
-    if (lang) {
+    if(lang==='c++'){
+      query.language={$regex: new RegExp('c\\+\\+', "i")}
+    }
+    else {
       query.language = { $regex: new RegExp(lang, "i") }; 
     }
 
@@ -37,12 +41,19 @@ export const GET = async (req: NextRequest) => {
       .limit(limit)
       .exec();
 
+      let paginatedDataUpdated=paginatedData;
+      if(lang!=''){
+        paginatedDataUpdated=paginatedData.filter((item:Repo)=>{
+          return item.language.toLowerCase()===lang
+         })
+      }
+
     const response = {
       total: totalRecords,
       pages: totalPages,
       current: page,
       recordsPerPage: limit,
-      data: paginatedData,
+      data: paginatedDataUpdated,
     };
 
     return new NextResponse(JSON.stringify(response), { status: 200 });
