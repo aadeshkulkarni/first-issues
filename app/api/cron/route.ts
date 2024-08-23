@@ -12,10 +12,12 @@ export const GET = async (req: Request) => {
     const repos = await readRepos();
     const fullRepoList = await fetchInfoFromGithub(repos);
     await mongoose.connect(process.env.MONGODB_URI!);
-
-    await Project.deleteMany({});
-    await Project.insertMany(fullRepoList);
-    return NextResponse.json({ message: "Job ran successfully", Data: fullRepoList });
+    if(fullRepoList.length > 0){
+      await Project.deleteMany({});
+      await Project.insertMany(fullRepoList);
+      return NextResponse.json({ message: "Job ran successfully", Data: fullRepoList });
+    }
+    return NextResponse.json({ message: "Job failed ", error: "0 Repositories found" });
   } catch (error) {
     console.log("[CronError]: ", error);
     return NextResponse.json({ message: "Job failed ", error: error });
