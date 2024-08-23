@@ -14,9 +14,21 @@ export const GET = async (req: NextRequest) => {
 
     const query: any = {};
     if (lang) {
-      query.language = { $regex: new RegExp(lang, "i") }; 
+      query.language = { $regex: new RegExp(lang, "i") };
     }
 
+    const aggregationPipeline: any[] = [
+      { $match: query },
+      {
+        $addFields: {
+          issue_count: { $size: "$issues" } //length of issues array
+        }
+      }
+    ]
+
+
+
+    await connectDb();
     const sort: any = {};
     if (sortBy) {
       if (sortBy === "stars") {
@@ -24,20 +36,29 @@ export const GET = async (req: NextRequest) => {
       } else if (sortBy === "last_active") {
         sort.last_modified = order;
       } else if (sortBy === "num_of_issues") {
-        sort.issues = order;
+        sort.issue_count = order; // this field be available to the pipeline context 
+        aggregationPipeline.push({ $sort: sort}, {$skip: (page - 1) * limit}, {$limit: limit })
       }
     }
-    
-    await connectDb();
+
+
+
 
     const totalRecords = await Project.countDocuments(query);
     const totalPages = Math.ceil(totalRecords / limit);
 
-    const paginatedData = await Project.find(query)
-      .sort(sort)
-      .skip((page - 1) * limit)
-      .limit(limit)
-      .exec();
+    let paginatedData;
+
+    if (sortBy === "num_of_issues") {
+      paginatedData = await Project.aggregate(aggregationPipeline);
+    } else {
+      paginatedData = await Project.find(query)
+        .sort(sort)
+        .skip((page - 1) * limit)
+        .limit(limit)
+    }
+
+
 
     const response = {
       total: totalRecords,
