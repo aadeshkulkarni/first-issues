@@ -14,46 +14,29 @@ const populateRepoDetails = async (owner: string, repo_name: string) => {
   try {
     console.log(`[${owner}/${repo_name}]: Getting info...`);
 
-    const metadataPromise = fetch(
-      `https://api.github.com/repos/${owner}/${repo_name}`,
-      {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-          "User-Agent": "request",
-        },
+    const HEADERS = {
+      headers: {
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        "User-Agent": "request",
       }
-    );
-    const issuesPromise = fetch(
+    };
+    const metadataResponse = await fetch(`https://api.github.com/repos/${owner}/${repo_name}`,HEADERS);
+    const metadata = await metadataResponse.json();
+
+    const issuesResponse =  await fetch(
       `https://api.github.com/repos/${owner}/${repo_name}/issues?labels=${encodeURIComponent(
         "good first issue"
-      )}&state=open&per_page=10&sort=created&direction=desc`,
-      {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-          "User-Agent": "request",
-        },
-      }
+      )}&state=open&per_page=10&sort=created&direction=desc`,HEADERS
     );
 
-    const responses = await Promise.allSettled([
-      metadataPromise,
-      issuesPromise,
-    ]);
-    const [metadata, issues] = await Promise.all(
-      responses
-        .map(async (response) => {
-          if (response.status === "fulfilled") {
-            const data = await response.value.json();
-            return data;
-          } else {
-            return null;
-          }
-        })
-        .filter(Boolean)
-    );
+    const issues = await issuesResponse.json();
 
     // Filters
-    if (metadata?.archived) {
+    if(!("updated_at" in metadata)) {
+      console.log(`[${owner}/${repo_name}]: Does not have last updated information.: `);
+      return null;
+    }
+    if (metadata && metadata?.archived) {
       console.log(`[${owner}/${repo_name}]: Repository is archived.`);
       return null;
     }
@@ -65,7 +48,7 @@ const populateRepoDetails = async (owner: string, repo_name: string) => {
       return null;
     }
 
-    const { description, language, html_url, stargazers_count, pushed_at, id } =
+    const { description, language, html_url, stargazers_count, updated_at, id } =
       metadata;
 
     const payload: Repo = {
@@ -75,7 +58,7 @@ const populateRepoDetails = async (owner: string, repo_name: string) => {
       language,
       html_url: html_url,
       stars: stargazers_count,
-      last_modified: new Date(pushed_at).toISOString(),
+      last_modified: updated_at ? new Date(updated_at).toISOString() : "",
       id: `${id}`,
       issues: issues?.map(mapIssue) ?? [],
     };
