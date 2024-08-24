@@ -13,12 +13,22 @@ export const GET = async (req: NextRequest) => {
     const limit = parseInt(url.searchParams.get("limit") || "100");
 
     const query: any = {};
-    if(lang==='c++'){
-      query.language={$regex: new RegExp('c\\+\\+', "i")}
+    if (lang === 'c++') {
+      query.language = { $regex: new RegExp('c\\+\\+', "i") }
     }
     else {
-      query.language = { $regex: new RegExp(lang, "i") }; 
+      query.language = { $regex: new RegExp(lang, "i") };
     }
+
+    const pipeline: any[] = [
+      {
+        $match: query
+      }, {
+        $addFields: {
+          issue_count: { $size: "$issues" }
+        }
+      }
+    ]
 
     const sort: any = {};
     if (sortBy) {
@@ -27,26 +37,38 @@ export const GET = async (req: NextRequest) => {
       } else if (sortBy === "last_active") {
         sort.last_modified = order;
       } else if (sortBy === "num_of_issues") {
-        sort.issues = order;
+        pipeline.push({
+          $sort: {issue_count : order}    //it will avaible on the pipline context
+        },
+          { $skip: (page - 1) * limit },
+          { $limit: limit })
       }
     }
-    console.log("Mongoose query: ",query);
+    console.log("Mongoose query: ", query );
+    console.dir( pipeline, {depth:Infinity} );
     await mongoose.connect(process.env.MONGODB_URI!);
     const totalRecords = await Project.countDocuments(query);
     const totalPages = Math.ceil(totalRecords / limit);
 
-    const paginatedData = await Project.find(query)
-      .sort(sort)
-      .skip((page - 1) * limit)
-      .limit(limit)
-      .exec();
+    let paginatedData;
+    if (sortBy === "num_of_issues") {
+      paginatedData = await Project.aggregate(pipeline);
+    
+    } else {
+      paginatedData = await Project.find(query)
+        .sort(sort)
+        .skip((page - 1) * limit)
+        .limit(limit)
+        .exec();
+    }
+   
 
-      let paginatedDataUpdated=paginatedData;
-      if(lang!=''){
-        paginatedDataUpdated=paginatedData.filter((item:Repo)=>{
-          return item.language.toLowerCase()===lang
-         })
-      }
+    let paginatedDataUpdated = paginatedData;
+    if (lang != '') {
+      paginatedDataUpdated = paginatedData.filter((item: Repo) => {
+        return item.language.toLowerCase() === lang
+      })
+    }
 
     const response = {
       total: totalRecords,
