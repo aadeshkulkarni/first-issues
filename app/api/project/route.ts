@@ -11,6 +11,8 @@ export const GET = async (req: NextRequest) => {
     const order = url.searchParams.get("order")?.toLowerCase() === "desc" ? -1 : 1;
     const page = parseInt(url.searchParams.get("page") || "1");
     const limit = parseInt(url.searchParams.get("limit") || "100");
+    const max_stars = parseInt(url.searchParams.get("max_stars")|| "");
+    const min_stars = parseInt(url.searchParams.get("min_stars") || "");
 
     const query: any = {};
     if (lang === 'c++') {
@@ -19,6 +21,15 @@ export const GET = async (req: NextRequest) => {
     else {
       query.language = { $regex: new RegExp(lang, "i") };
     }
+
+    query.stars = {
+      $lte: max_stars,
+      $gte: min_stars,
+      
+      
+    }
+    
+  
 
     const pipeline: any[] = [
       {
@@ -31,6 +42,8 @@ export const GET = async (req: NextRequest) => {
     ]
 
     const sort: any = {};
+    if(query.stars) sort.stars = -1;
+
     if (sortBy) {
       if (sortBy === "stars") {
         sort.stars = order;
@@ -45,7 +58,6 @@ export const GET = async (req: NextRequest) => {
       }
     }
     console.log("Mongoose query: ", query );
-    console.dir( pipeline, {depth:Infinity} );
     await mongoose.connect(process.env.MONGODB_URI!);
     const totalRecords = await Project.countDocuments(query);
     const totalPages = Math.ceil(totalRecords / limit);

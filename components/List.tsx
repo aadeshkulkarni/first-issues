@@ -19,15 +19,23 @@ dayjs.extend(relativeTime);
 interface Props {
   langFilter: string;
   sortFilter: sortProp;
+  starsRange: {
+    max_stars: number;
+    min_stars: number;
+  };
 }
 
-const List = ({ langFilter, sortFilter }: Props) => {
+const List = ({ langFilter, sortFilter, starsRange }: Props) => {
 
   langFilter = encodeURIComponent(langFilter);
+  console.log("range",starsRange)
 
-  const { isLoading, data: repos } = useFetch<Repo[]>({
-    url: `/api/project?lang=${langFilter}&sort_by=${sortFilter.value}&order=${sortFilter.order}`,
+  let { isLoading, data: repos } = useFetch<Repo[]>({
+    url: `/api/project?lang=${langFilter}&sort_by=${sortFilter.value}&order=${sortFilter.order}&min_stars=${starsRange.min_stars}&max_stars=${starsRange.max_stars}`,
   });
+
+
+
 
   return (
     <>

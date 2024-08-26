@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { sortProp } from "@/utils/constants";
+import { Repo } from "@/schema";
 
 const New_PROJECT =
   "https://github.com/aadeshkulkarni/first-issues?tab=readme-ov-file#adding-a-new-project";
@@ -15,6 +16,10 @@ const New_PROJECT =
 const Home = () => {
   const [langFilter, setLangFilter] = React.useState<string>("");
   const [sortFilter, setSortFilter] = React.useState<sortProp>({});
+  const [starsRange, setStarsRange] = React.useState<{ max_stars: number; min_stars: number }>({
+    max_stars: 10000,
+    min_stars: 10
+  });
   const router = useRouter();
 
   const navigateToFeedback = () => {
@@ -35,6 +40,7 @@ const Home = () => {
             sortFilter={sortFilter}
             setSortFilter={setSortFilter}
             setLangFilter={setLangFilter}
+            setStarsRange={setStarsRange}
           />
           <Button
             variant="default"
@@ -55,7 +61,7 @@ const Home = () => {
           </Button>
         </div>
         <div className="col-span-12 md:col-span-8 md:h-[90vh] overflow-y-auto no-scrollbar">
-          <List langFilter={langFilter} sortFilter={sortFilter} />
+          <List langFilter={langFilter} sortFilter={sortFilter} starsRange={starsRange} />
         </div>
       </div>
     </main>
