@@ -14,6 +14,7 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { Badge } from "./ui/badge";
 import { sortProp } from "@/utils/constants";
+import Image from "next/image";
 dayjs.extend(relativeTime);
 
 interface Props {
@@ -28,7 +29,7 @@ interface Props {
 const List = ({ langFilter, sortFilter, starsRange }: Props) => {
 
   langFilter = encodeURIComponent(langFilter);
-  console.log("range",starsRange)
+
 
   let { isLoading, data: repos } = useFetch<Repo[]>({
     url: `/api/project?lang=${langFilter}&sort_by=${sortFilter.value}&order=${sortFilter.order}&min_stars=${starsRange.min_stars}&max_stars=${starsRange.max_stars}`,
@@ -40,6 +41,8 @@ const List = ({ langFilter, sortFilter, starsRange }: Props) => {
   return (
     <>
       <ListLoader isLoading={isLoading} />
+      {repos?.length === 0 && <div className="flex items-center h-screen">
+        <Image src={"https://cdn.dribbble.com/userupload/2905354/file/original-92212c04a044acd88c69bedc56b3dda2.png?resize=1600x1200"} alt={"repo-not-found"} width={600} height={600} className="rounded-xl mx-auto " /></div>}
       {repos?.map((repo) => (
         <Accordion key={repo.name} type="single" collapsible className="my-2">
           <AccordionItem

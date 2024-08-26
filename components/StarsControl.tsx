@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React, { useRef } from "react"
 import { Slider } from "./ui/slider"
 import { cn } from "@/lib/utils"
 import { Badge } from "./ui/badge"
@@ -14,13 +14,22 @@ interface StarControlProps {
 export function StarControl({ setStarsRange }: StarControlProps) {
   const [localValues, setLocalValues] = React.useState([10, 10000])
 
-  function handleValueChange(newValues: number[]) {
-    console.log("value changed", newValues);
-    setLocalValues(newValues)
-    setStarsRange({
+  const debouncedStarsRangeTimeout = useRef<NodeJS.Timeout | null>(null);
+  function handleSliderValueChange(newValues: number[]) {
+
+    setLocalValues(newValues);
+
+    //clearing any previous timeouts in the ref
+    if (debouncedStarsRangeTimeout.current) {
+      clearTimeout(debouncedStarsRangeTimeout.current);
+    }
+
+    // intializing a new timeout to somehow prevent multiple db calls by debouncing slider input for a second
+    debouncedStarsRangeTimeout.current = setTimeout(() => setStarsRange({
       min_stars: newValues[0],
       max_stars: newValues[1]
-    });
+    }), 1000)
+
 
   }
 
@@ -31,11 +40,11 @@ export function StarControl({ setStarsRange }: StarControlProps) {
         SELECT BY STAR COUNT
       </h2>
       <Slider
-        defaultValue={[10, 10000]}
+        defaultValue={localValues}
         max={10000}
-        min={0}
+        min={10}
         step={100}
-        onValueChange={handleValueChange}
+        onValueChange={handleSliderValueChange}
         className={cn("w-full")}
       />
       <div className="flex flex-wrap gap-2 ">

@@ -42,7 +42,7 @@ export const GET = async (req: NextRequest) => {
     ]
 
     const sort: any = {};
-    if(query.stars) sort.stars = -1;
+    if(query.stars) sort.stars = 1; //keeping the sort order(asc) if a range is provided
 
     if (sortBy) {
       if (sortBy === "stars") {
@@ -57,7 +57,6 @@ export const GET = async (req: NextRequest) => {
           { $limit: limit })
       }
     }
-    console.log("Mongoose query: ", query );
     await mongoose.connect(process.env.MONGODB_URI!);
     const totalRecords = await Project.countDocuments(query);
     const totalPages = Math.ceil(totalRecords / limit);
