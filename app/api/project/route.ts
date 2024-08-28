@@ -21,16 +21,10 @@ export const GET = async (req: NextRequest) => {
     else {
       query.language = { $regex: new RegExp(lang, "i") };
     }
-
     query.stars = {
       $lte: max_stars,
       $gte: min_stars,
-      
-      
     }
-    
-  
-
     const pipeline: any[] = [
       {
         $match: query
@@ -43,7 +37,6 @@ export const GET = async (req: NextRequest) => {
 
     const sort: any = {};
     if(query.stars) sort.stars = 1; //keeping the sort order(asc) if a range is provided
-
     if (sortBy) {
       if (sortBy === "stars") {
         sort.stars = order;
@@ -72,8 +65,6 @@ export const GET = async (req: NextRequest) => {
         .limit(limit)
         .exec();
     }
-   
-
     let paginatedDataUpdated = paginatedData;
     if (lang != '') {
       paginatedDataUpdated = paginatedData.filter((item: Repo) => {
