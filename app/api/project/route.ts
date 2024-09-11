@@ -11,42 +11,66 @@ export const GET = async (req: NextRequest) => {
     const order = url.searchParams.get("order")?.toLowerCase() === "desc" ? -1 : 1;
     const page = parseInt(url.searchParams.get("page") || "1");
     const limit = parseInt(url.searchParams.get("limit") || "100");
+    const max_stars = parseInt(url.searchParams.get("max_stars")|| "");
+    const min_stars = parseInt(url.searchParams.get("min_stars") || "");
 
     const query: any = {};
-    if(lang==='c++'){
-      query.language={$regex: new RegExp('c\\+\\+', "i")}
+    if (lang === 'c++') {
+      query.language = { $regex: new RegExp('c\\+\\+', "i") }
     }
     else {
-      query.language = { $regex: new RegExp(lang, "i") }; 
+      query.language = { $regex: new RegExp(lang, "i") };
     }
+    query.stars = {
+      $lte: max_stars,
+      $gte: min_stars,
+    }
+    const pipeline: any[] = [
+      {
+        $match: query
+      }, {
+        $addFields: {
+          issue_count: { $size: "$issues" }
+        }
+      }
+    ]
 
     const sort: any = {};
+    if(query.stars) sort.stars = 1; //keeping the sort order(asc) if a range is provided
     if (sortBy) {
       if (sortBy === "stars") {
         sort.stars = order;
       } else if (sortBy === "last_active") {
         sort.last_modified = order;
       } else if (sortBy === "num_of_issues") {
-        sort.issues = order;
+        pipeline.push({
+          $sort: {issue_count : order}    //it will avaible on the pipline context
+        },
+          { $skip: (page - 1) * limit },
+          { $limit: limit })
       }
     }
-    console.log("Mongoose query: ",query);
     await mongoose.connect(process.env.MONGODB_URI!);
     const totalRecords = await Project.countDocuments(query);
     const totalPages = Math.ceil(totalRecords / limit);
 
-    const paginatedData = await Project.find(query)
-      .sort(sort)
-      .skip((page - 1) * limit)
-      .limit(limit)
-      .exec();
-
-      let paginatedDataUpdated=paginatedData;
-      if(lang!=''){
-        paginatedDataUpdated=paginatedData.filter((item:Repo)=>{
-          return item.language.toLowerCase()===lang
-         })
-      }
+    let paginatedData;
+    if (sortBy === "num_of_issues") {
+      paginatedData = await Project.aggregate(pipeline);
+    
+    } else {
+      paginatedData = await Project.find(query)
+        .sort(sort)
+        .skip((page - 1) * limit)
+        .limit(limit)
+        .exec();
+    }
+    let paginatedDataUpdated = paginatedData;
+    if (lang != '') {
+      paginatedDataUpdated = paginatedData.filter((item: Repo) => {
+        return item.language.toLowerCase() === lang
+      })
+    }
 
     const response = {
       total: totalRecords,
