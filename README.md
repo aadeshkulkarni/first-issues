@@ -48,6 +48,17 @@ $ npm run dev # start the development server
 
 The app should spin up on your browser.
 
+## Seeding
+
+After completing the above steps, your app will be up and running. But, your database is empty. It needs to be populated. 
+
+```
+GET http://localhost:3000/api/cron
+```
+
+Run this endpoint from Postman app / Browser. It will take some time. This will populate your DB with essential data to get started.
+
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
