@@ -15,6 +15,8 @@ const FilterLoader = ({ isLoading }: Props) => {
       <Skeleton className="w-24 h-8 rounded-md" />
       <Skeleton className="w-24 h-8 rounded-md" />
       <Skeleton className="w-24 h-8 rounded-md" />
+      <Skeleton className="w-24 h-8 rounded-md" />
+      <Skeleton className="w-24 h-8 rounded-md" />
     </div>
   );
 };
