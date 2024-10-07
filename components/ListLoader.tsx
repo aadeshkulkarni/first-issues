@@ -16,6 +16,8 @@ const ListLoader = ({ isLoading }: Props) => {
       <Skeleton className="w-full h-24 rounded-md" />
       <Skeleton className="w-full h-24 rounded-md" />
       <Skeleton className="w-full h-24 rounded-md" />
+      <Skeleton className="w-full h-24 rounded-md" />
+      <Skeleton className="w-full h-24 rounded-md" />
     </div>
   );
 };
